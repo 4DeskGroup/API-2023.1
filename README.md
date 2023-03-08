@@ -7,7 +7,7 @@
  <img src="https://user-images.githubusercontent.com/90328117/161355339-d016f60b-e185-49da-a5de-6c21f1965449.png" style="width:80px;height:40px;">
 </div>
 
-##### <p align="center"> Projeto Integrador -  </p>
+##### <p align="center"> Projeto Integrador - Sistema de Gerenciamento de Usúario </p>
 
 ##### <p align="center">  Empresa parceira: </p>
  
@@ -18,3 +18,12 @@ style="width:200px;height:70px;">
 </div>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# :dart: O Projeto
+
+<p align="left"> Desenvolver um sistema de Gerenciamento de Usuário, com tecnologia de micro serviços.
+Uma interface permitindo que os usúarios, sejam, criados, visualizados, editados e removidos. </p>
+
+
+
+
