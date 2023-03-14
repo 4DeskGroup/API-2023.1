@@ -18,11 +18,31 @@ style="width:200px;height:70px;">
 </div>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<div align="center">
+ 
+[O Projeto](https://github.com/4DeskGroup/API-2023.1/edit/main/README.md) • [Calendário Entrega Sprints](https://github.com/4DeskGroup/API-2023.1/edit/main/README.md#-planejamento-de-entregas) •
+</div>
 
 # :dart: O Projeto
 
 <p align="left"> Desenvolver um sistema de Gerenciamento de Usuário, com tecnologia de micro serviços.
 Uma interface permitindo que os usúarios, sejam, criados, visualizados, editados e removidos. </p>
+
+## ⏳ Planejamento de entregas
+
+ </Div>
+ 
+ 
+
+ :white_check_mark: [SPRINT 1] - 13/03/2023 à 02/04/2023
+
+ :white_large_square: [SPRINT 2] - 03/04/2023 à 23/04/2023
+ 
+ :white_large_square: [SPRINT 3] - 24/04/2023 à 14/05/2023
+ 
+ :white_large_square: [SPRINT 4] - 15/05/2023 à 04/06/2023 
+ 
+ #### :white_large_square: Feira de Soluções - 13/06/2023 à 14/06/2023
 
 
 
