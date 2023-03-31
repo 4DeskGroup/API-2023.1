@@ -43,7 +43,3 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
  :white_large_square: [SPRINT 4] - 15/05/2023 à 04/06/2023 
  
  #### :white_large_square: Feira de Soluções - 13/06/2023 à 14/06/2023
-
-
-
-
