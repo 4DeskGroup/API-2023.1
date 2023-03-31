@@ -45,5 +45,41 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
  #### :white_large_square: Feira de Soluções - 13/06/2023 à 14/06/2023
 
 
+# 🗂️ Cards das Sprints
+
+# :computer: Tecnologias Utilizadas
+
+
+<p align="left">
+  <img src="https://download.logo.wine/logo/Node.js/Node.js-Logo.wine.png" width="100" height="60" alt="NodeJS logo">
+</p>
+
+<p align="left">
+  <img src="https://i0.wp.com/programmingwithmosh.com/wp-content/uploads/2019/01/2000px-React-icon.svg_.png?fit=2000%2C1413&ssl=1" width="70" height="50" alt="React logo"> 
+
+<p align="left">
+  <img src="https://logonoid.com/images/postgresql-logo.png" width="100" height="100" alt="Postgre logo">
+</p>
+</p> 
+
+
+
+
+# :bulb: Backlog
+
+
+# 🎓 Equipe
+
+|        Nome         |       Função        |     GitHub                                               |    Avatar                                          |
+| ------------------- | ------------------- | -------------------                                      | -------------------                                |
+|  Laiza Cristina    |  Scrum Master       |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                      |           <img src="" style="width:50px;height:50px;">                                         |
+  Carlos             |  P.O                |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                      |           <img src="" style="width:50px;height:50px;">   |
+|  Stefani    |  Desenvolvedora       |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">                                                       |
+|  Raynara     |  Desenvolvedora        |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
+|   Emili    |  Desenvolvedora       |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
+|   Diane Moreno    |  Desenvolvedora       |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
+|   Rita Hecht   |  Desenvolvedora       |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
+
+
 
 
