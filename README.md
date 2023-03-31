@@ -49,17 +49,14 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
 # :computer: Tecnologias Utilizadas
 
 
-<p align="left">
+<div align="center">
   <img src="https://download.logo.wine/logo/Node.js/Node.js-Logo.wine.png" width="100" height="60" alt="NodeJS logo">
-</p>
 
-<p align="left">
   <img src="https://i0.wp.com/programmingwithmosh.com/wp-content/uploads/2019/01/2000px-React-icon.svg_.png?fit=2000%2C1413&ssl=1" width="70" height="50" alt="React logo"> 
-
-<p align="left">
+ 
   <img src="https://logonoid.com/images/postgresql-logo.png" width="100" height="100" alt="Postgre logo">
-</p>
-</p> 
+</div>
+
 
 
 
