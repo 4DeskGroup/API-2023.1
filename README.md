@@ -78,7 +78,8 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
 |  Raynara     |  Desenvolvedora        |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
 |   Emili    |  Desenvolvedora       |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
 |   Diane Moreno    |  Desenvolvedora       |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
-|   Rita Hecht   |  Desenvolvedora       |<a href=""><img src="g" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
+|   Rita Hecht   |  Desenvolvedora       |<a href="https://github.com/ritahecht"><img src="https://user-images.githubusercontent.com/90328117/161353573-4c0e497a-b4fa-4f46-ade2-10b37360e2d2.jpg" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="https://user-images.githubusercontent.com/90328117/168085416-fec32d63-7a77-458f-bda8-0cab09491091.jpg" style="width:50px;height:50px;"> 
+ 
 
 
 
