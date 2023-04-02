@@ -34,7 +34,7 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
  
  
 
- :white_check_mark: [SPRINT 1] - 13/03/2023 à 02/04/2023 -<a href="https://github.com/4DeskGroup/API-2023.1/releases/tag/SPRINT1">Acesse o Realease aqui</a>
+ :white_check_mark: [SPRINT 1] - 13/03/2023 à 02/04/2023 - <a href="https://github.com/4DeskGroup/API-2023.1/releases/tag/SPRINT1">Acesse o Realease aqui</a>
 
  :white_large_square: [SPRINT 2] - 03/04/2023 à 23/04/2023
  
