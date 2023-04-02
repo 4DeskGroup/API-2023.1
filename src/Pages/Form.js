@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "../CSS/form.css";
+import './CSS/form.css'
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 export function Form() {
 
     const [values, setValues] = useState();
-
+    const navigate = useNavigate();
     const handleChangeValues = (value)=>{
       setValues(prevValue=>({
         ...prevValue,
@@ -73,18 +73,18 @@ export function Form() {
     
     return (
       <div>
-        <div className="cabecalho">
-          <div className="container_linha">
-            <p className="cad_titulo">Cadastre-se</p>
+        <div className="cabecalho2">
+          <div className="container_linha2">
+            <p className="cad_titulo2">Cadastre-se</p>
           </div>
         </div>
-        <form>
-          <div className="container">
-            <p className="sub_titulo">
+        <form className="form2">
+          <div className="container2">
+            <p className="sub_titulo2">
               Preencha os campos abaixo com seus dados:
             </p>
-            <div className="row">
-              <div className="column">
+            <div className="row2">
+              <div className="column2">
               <input id="obg1"
                   type="login"
                   name="login"
@@ -107,7 +107,7 @@ export function Form() {
                   placeholder="Sobrenome"
                 />
               </div>
-              <div className="column">
+              <div className="column2">
                 <input
                   id="obg4"
                   type="email"
@@ -132,10 +132,10 @@ export function Form() {
                   placeholder="Confirmar Senha"
                 />
               </div>
-              <div className="conteiner_termo">
-                <div className="termosAcesso">
-                  <input type="checkbox" className="checkbox" id="checkbox"/>
-                  <label for="checkbox" className="acesso_txt">
+              <div className="conteiner_termo2">
+                <div className="termosAcesso2">
+                  <input type="checkbox" className="checkbox2" id="checkbox"/>
+                  <label for="checkbox" className="acesso_txt2">
                     Li e aceito os termos de acesso
                   </label>
                 </div>
@@ -143,9 +143,9 @@ export function Form() {
             </div>
           </div>
 
-          <div className="botoes">
-            <button>voltar</button>
-            <button type="button" className="register--button" 
+          <div className="botoes2">
+            <button onClick={()=>[navigate ('/')]}>voltar</button>
+            <button type="button" className="register--button2" 
             onClick={()=>handleClickButton()}> cadastrar </button>
           </div>
         </form>

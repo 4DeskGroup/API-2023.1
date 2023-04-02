@@ -33,7 +33,7 @@ nav{
 }
 
 /*estilizando escritas*/
-#navbar li a{
+#navbar li a, .link_nav{
     text-decoration: none;
     font-size: 1rem;
     font-weight: 400;
@@ -42,12 +42,12 @@ nav{
 }
 
 /*estilizando escritas quando cursor sobrepõe*/
-#navbar li a:hover{
+#navbar li a:hover, .link_nav:hover{
     color: rgb(137, 128, 164);
 }
 
 /*criando linha laranja ao passar o cursor no texto*/
-#navbar li a:hover::after{
+#navbar li a:hover::after, .link_nav:hover::after{
     content: '';
     width: 30%;
     height: 2px;

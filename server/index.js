@@ -6,8 +6,16 @@ const cors = require("cors")
 const cliente = new Pool({
     host: "localhost",
     user: "postgres",
-    password: "24g11r84",
-    database: "UsuarioBD"
+    password: "1234",
+    database: "visiona"
+})
+app.get("/getInfo", (req, res)=>{
+
+    cliente.query('select login, status, usuarioTipo, dataCadastro from usuarios', (err, result)=>{
+        if(err) console.log(err);
+        else res.json(result.rows);
+    })
+
 })
 
 function buscaUsuario(login, senha, res){

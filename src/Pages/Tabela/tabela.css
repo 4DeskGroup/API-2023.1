@@ -1,0 +1,135 @@
+* {
+    font-family: 'Poppins';
+}
+
+.container3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140vh;
+  width: 100%;
+  background:  #F5F5F5;
+ 
+
+}
+
+.fundo3{
+  position: absolute;
+  width: 1000px;
+  height: 100%;
+  border-left: 500px;
+  top: 160px;
+  background: #F9F9F9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  
+  }
+
+.content3{
+    background: #FFFFFF;
+    border-radius: 15px;
+    width: 900px;
+    height: 250px;
+    justify-content: space-between;
+    align-items: center;
+    top: 50px;
+    position: relative;
+    border:0.05px solid #72787A;
+    margin-left: 50px;
+      
+
+  }
+
+
+ .tabela3 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-right: 3%;
+    width: 96%;
+    margin-left: 2%;
+    
+  }
+
+.tabela3 td {
+    border-bottom: 0.05px solid #72787A;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+.tabela3 tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+   
+  .tabela3 th {
+    border-bottom: 0.05px solid #72787A;
+    padding: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color: #FF9000;
+    height: 20px;
+
+  }  
+  
+
+.titulo3{
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #FF9000;
+        position: absolute;
+        left: 160px;
+        top: 80px;
+  } 
+
+  .title-container3 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .title-hr3 {
+    border: 1px solid #FF9000;
+    width: 600px;
+    margin-left: 15px;
+}
+.tr4 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.td4Login {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+  
+.td4Data {
+  justify-content: center;
+  align-items: center;
+  
+  width: 300px;
+}
+
+.td4Status {
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+
+}
+    
+.td4Tipo {
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+      
+
+.alinha {
+display: flex;
+align-items: center;
+justify-content: center;
+
+}

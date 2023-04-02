@@ -1,89 +1,70 @@
-# API-2023.1
+# Getting Started with Create React App
 
-<div align = "center">
-<img src = "https://user-images.githubusercontent.com/90328117/161254359-c6392c85-9f18-4993-9dbf-f1057c8d5a83.png"
- style="width:70px;height:70px;">
- 
- <img src="https://user-images.githubusercontent.com/90328117/161355339-d016f60b-e185-49da-a5de-6c21f1965449.png" style="width:80px;height:40px;">
-</div>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##### <p align="center"> Projeto Integrador - Sistema de Gerenciamento de Usúario </p>
+## Available Scripts
 
-##### <p align="center">  Empresa parceira: </p>
- 
-<div align = "center"> 
-<img src = "https://user-images.githubusercontent.com/89950512/223505245-25a0d6a6-69ae-4799-9150-d081003c5c67.jpeg"
-style="width:200px;height:70px;">
+In the project directory, you can run:
 
-</div>
+### `npm start`
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<div align="center">
- 
-[O Projeto](https://github.com/4DeskGroup/API-2023.1/edit/main/README.md) • [Calendário Entrega Sprints](https://github.com/4DeskGroup/API-2023.1/edit/main/README.md#-planejamento-de-entregas) •
-</div>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# :dart: O Projeto
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-<p align="left"> Desenvolver um sistema de Gerenciamento de Usuário, com tecnologia de micro serviços.
-Uma interface permitindo que os usúarios, sejam, criados, visualizados, editados e removidos. </p>
+### `npm test`
 
-## ⏳ Planejamento de entregas
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
- </Div>
- 
- 
+### `npm run build`
 
- :white_check_mark: [SPRINT 1] - 13/03/2023 à 02/04/2023
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
- :white_large_square: [SPRINT 2] - 03/04/2023 à 23/04/2023
- 
- :white_large_square: [SPRINT 3] - 24/04/2023 à 14/05/2023
- 
- :white_large_square: [SPRINT 4] - 15/05/2023 à 04/06/2023 
- 
- #### :white_large_square: Feira de Soluções - 13/06/2023 à 14/06/2023
- 
- # :bulb: Backlog
- <div align="left">
-  <img src="https://user-images.githubusercontent.com/89950512/229325444-e171a7b3-39d0-4da8-acce-36f021d00c91.png" width="500" height="300" alt="NodeJS logo">
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
- </div>
- 
- 
- # 🗂️ Cards das Sprints
-  <div align="left">
-  <img src="https://user-images.githubusercontent.com/89950512/229325493-16d186d9-c562-4d09-a0dc-43111c7c4ce0.png" width="500" height="300" alt="NodeJS logo">
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
- </div>
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-# :computer: Tecnologias 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-<div align="left">
-  <img src="https://user-images.githubusercontent.com/89950512/229325532-852289d7-c272-4e13-a9f9-847a90bbf31f.png" width="500" height="300" alt="NodeJS logo">
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
- </div>
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Learn More
 
-# 🎓 Equipe
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-|        Nome         |       Função        |     GitHub                                               |    Avatar                                          |
-| ------------------- | ------------------- | -------------------                                      | -------------------                                |
-|  Laiza Cristina    |  Scrum Master       |<a href="https://github.com/LaizaCristina"><img src="https://user-images.githubusercontent.com/90328117/161353573-4c0e497a-b4fa-4f46-ade2-10b37360e2d2.jpg" class="media-object  img-responsive img-thumbnail"></a>                                                      |           <img src="" style="width:50px;height:50px;">                                         |
-  Carlos             |  P.O                |<a href="https://github.com/CarlosKB"><img src="https://user-images.githubusercontent.com/90328117/161353573-4c0e497a-b4fa-4f46-ade2-10b37360e2d2.jpg" class="media-object  img-responsive img-thumbnail"></a>                                                      |           <img src="" style="width:50px;height:50px;">   |
-|  Stefani    |  Desenvolvedora       |<a href="https://github.com/ste-fa-nie"><img src="https://user-images.githubusercontent.com/90328117/161353573-4c0e497a-b4fa-4f46-ade2-10b37360e2d2.jpg" class="media-object  img-responsive img-thumbnail"></a>                                                    |           <img src="" style="width:50px;height:50px;">                                                       |
-|  Raynara     |  Desenvolvedora        |<a href="https://github.com/raynaranasc"><img src="https://user-images.githubusercontent.com/90328117/161353573-4c0e497a-b4fa-4f46-ade2-10b37360e2d2.jpg" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
-|   Emili    |  Desenvolvedora       |<a href="https://github.com/EmiliToleto"><img src="https://user-images.githubusercontent.com/90328117/161353573-4c0e497a-b4fa-4f46-ade2-10b37360e2d2.jpg" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
-|   Diane Moreno    |  Desenvolvedora       |<a href="https://github.com/Diane-Moreno"><img src="https://user-images.githubusercontent.com/90328117/161353573-4c0e497a-b4fa-4f46-ade2-10b37360e2d2.jpg" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="" style="width:50px;height:50px;">  
-|   Rita Hecht   |  Desenvolvedora       |<a href="https://github.com/ritahecht"><img src="https://user-images.githubusercontent.com/90328117/161353573-4c0e497a-b4fa-4f46-ade2-10b37360e2d2.jpg" class="media-object  img-responsive img-thumbnail"></a>                                                          |           <img src="https://user-images.githubusercontent.com/90328117/168085416-fec32d63-7a77-458f-bda8-0cab09491091.jpg" style="width:50px;height:50px;"> 
- 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
- 
- 
- 
- 
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.jpg";
-
-import "C:/Users/stef/Documents/coding/reactJS/menu/src/components/NavbarStyles.css";
-
+import './NavbarStyles.css'
+import { NavLink } from "react-router-dom";
 class Navbar extends Component {
   state = { clicked: false };
   handleClick = () => {
@@ -19,15 +18,13 @@ class Navbar extends Component {
           <div>
             <ul id="navbar">
               <li>
-                <a className="apertado" href="/index.js">
-                  home
-                </a>
+              <NavLink className="link_nav" to="/welcome">home</NavLink>
               </li>
               <li>
-                <a href="index.js">dashboard</a>
+              <NavLink className="link_nav" to="/welcome">dashboard</NavLink>
               </li>
               <li>
-                <a href="index.js">usuários</a>
+                <NavLink className="link_nav" to="/tabela">usuários</NavLink>
               </li>
             </ul>
           </div>
@@ -48,7 +45,7 @@ class Navbar extends Component {
               <a href="/index.js">Editar conta</a>
             </li>
             <li>
-              <a href="index.js">Log out</a>
+            <NavLink className="link_nav" to="/">Log out</NavLink>
             </li>
           </ul>
         </div>

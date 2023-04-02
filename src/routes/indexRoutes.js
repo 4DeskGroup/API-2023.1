@@ -1,6 +1,8 @@
-import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Form } from "../Pages/Form";
 import Login from "../Pages/login";
+import Welcome from "../Pages/Welcome";
+import Table from "../Pages/Tabela/Table";
 
 export const Rotas = () => {
     return (
@@ -9,6 +11,8 @@ export const Rotas = () => {
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/form" element={<Form />} />
+                <Route path="/welcome" element={<Welcome />} />
+                <Route path="/tabela" element={<Table />} />
             </Routes>
         </BrowserRouter>
     )

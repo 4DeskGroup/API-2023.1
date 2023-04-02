@@ -1,20 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-* {
-    margin: 0;
+
+.body1 {
+  margin: 0;
     padding: 0;
     box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-body {
-    font-family: 'Poppins', sans-serif;
-}
-.container {
+.container1 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #ecf0f1;
 }
-.content {
+.content1 {
     background-color: #fff;
     border-radius: 15px;
     width: 960px;
@@ -23,7 +22,7 @@ body {
     align-items: center;
     position: relative;
 }
-.content::before {
+.content1::before {
     content: "";
     position: absolute;
     background-color: #EE8600;
@@ -35,42 +34,42 @@ body {
 
     left: 0;
 }
-.title {
+.title1 {
     font-size: 32px;
     font-weight: bold;
     text-transform: capitalize;
 }
-.title-primary {
+.title-primary1 {
     color: #fff;
     line-height: 90px;
 }
-.title-second {
+.title-second1 {
     color: #EE8600;
     line-height: 80px;
 }
-.desciption {
-    font-size: 14px;
-    font-weight: 300;
+.desciption1 {
+  font-size: 14px;
+  font-weight: 300;
 }
-.description-primary {
+.description-primary1 {
     line-height: 30px;
     color: #fff;
 }
-.description-second {
-    line-height: 100px;
-    color: #fff;
+.description-second1 {
+  line-height: 100px;
+  color: #fff;
 }
-.password {
-    color: #EE8600;
-    font-size: 14px;
-    margin: 15px 0;
-    text-align: center;
+.password1 {
+  color: #EE8600;
+  font-size: 14px;
+  margin: 15px 0;
+  text-align: center;
 }
-.password:hover{
-    color: darkblue;
-
+.password1:hover{
+  color: darkblue;
+  
 }
-.btn {
+.btn1 {
     border-radius: 15px;
     text-transform: uppercase;
     color: #fff;
@@ -83,66 +82,66 @@ body {
     border: none;
     margin-top: 1rem;
 }
-.btn-primary {
+.btn-primary1 {
     background-color: transparent;
     border: 1px solid #fff;
     transition: background-color .5s;
 }
-.btn-primary:hover {
-    background-color: #fff;
-    color: #EE8600;
+.btn-primary1:hover {
+  background-color: #fff;
+  color: #EE8600;
 }
 
-.btn-second {
+.btn-second1 {
     background-color: #EE8600;
     border: 1px solid #EE8600;
     transition: background-color .5s;
 }
-.btn-second:hover {
+.btn-second1:hover {
     background-color: #fff;
     border: 1px solid #EE8600;
     color: #EE8600;
 }
-.first-content {
-    display: flex;
+.first-content1 {
+  display: flex;
 }
-.first-content .second-column {
-    z-index: 11;
+.first-content1 .second-column1 {
+  z-index: 11;
 }
-.first-column {
-    text-align: center;
-    width: 40%;
-    z-index: 10;
+.first-column1 {
+  text-align: center;
+  width: 40%;
+  z-index: 10;
 }
-.second-column {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.second-column1 {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 55%;
+.form1 {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
 }
-.form input {
-    height: 45px;
-    width: 100%;
-    border: none;
-    background-color: #ecf0f1;
+.form1 input {
+  height: 45px;
+  width: 100%;
+  border: none;
+  background-color: #ecf0f1;
 }
-input:-webkit-autofill
-{
+input:-webkit-autofill 
+{    
     -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
     -webkit-text-fill-color: #000 !important;
 }
-.label-input {
+.label-input1 {
     background-color: #ecf0f1;
     display: flex;
     align-items: center;
     margin: 8px;
 }
-.icon-modify {
+.icon-modify1 {
     color: #7f8c8d;
     padding: 0 5px;
 }

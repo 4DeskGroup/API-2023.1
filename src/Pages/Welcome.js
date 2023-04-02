@@ -1,9 +1,9 @@
 import React from 'react';
 import {MDBBtn, MDBContainer} from "mdb-react-ui-kit";
-import '../styles/defaulTheme.scss';
 import { redirect } from 'react-router-dom';
 import Navbar from "../components/Navbar";
 import BottomNavbar from "../components/BottomNavbar";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 
 function Welcome() {
     return (
@@ -24,7 +24,7 @@ function Welcome() {
                     <MDBBtn className='shadow-5' color='light'>
                         <figure className='figure'>
                             <img
-                                src='../media/pictures/people.svg'
+                                src='images/people.svg'
                                 className='figure-img rounded mx-5 my-5'
                                 alt='...'
                             />
@@ -37,7 +37,7 @@ function Welcome() {
                     <MDBBtn className='shadow-5' color='light'>
                         <figure className='figure'>
                             <img
-                                src='../media/pictures/charts.svg'
+                                src='images/charts.svg'
                                 className='figure-img rounded mx-n1 my-1'
                                 alt='...'
                             />

@@ -1,30 +1,28 @@
 
-.cabecalho {
-    width: 100%;
-    height: 100px;
-    background-color: white;
-    margin-bottom: 30px;
+.cabecalho2 {
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        margin-bottom: 30px;
 }
 
-.container_linha {
+.container_linha2 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cad_titulo {
+.cad_titulo2 {
     font-size: 35px;
     position: relative;
     margin-left: -70%;
     margin-top: 20px;
-
-}
-
-p {
     color: orange;
+    
 }
 
-form {
+
+.form2 {
     margin-top: 53px;
     align-items: center;
     justify-content: center;
@@ -33,15 +31,16 @@ form {
 }
 
 
-.sub_titulo {
+.sub_titulo2 {
     margin-bottom: 430px;
     margin-left: -280px;
     margin-top: 100px;
     position: absolute;
+    color: orange;
 }
 
 
-input {
+.column2 input  {
     border-radius: 30px;
     width: 230px;
     height: 50px;
@@ -56,21 +55,21 @@ input {
     font-family: 'Poppins';
 }
 
-input:hover{
+.column2 input:hover{
     background: none;
     border: rgb(169, 169, 169);
     border-style: solid;
     border-width: 1.5px;
 }
 
-input:focus-visible {
+.column2 input:focus-visible {
     outline:0;
     border-radius: 10;
     border-color: rgb(136, 136, 240);
 
 }
 
-.column label {
+.column2 label {
     font-size: small;
     color: rgb(253, 160, 0);
     margin-top: 10px;
@@ -78,27 +77,27 @@ input:focus-visible {
     margin-left: -10px;
 }
 
-.conteiner_termo {
+.conteiner_termo2 {
     align-items: center;
     display: flex;
 }
 
-.termosAcesso {
+.termosAcesso2 {
     margin-top: -20px;
     display: inline;
     margin-bottom: 50px;
 
 }
 
-.checkbox {
+.checkbox2 {
     position: absolute;
     margin-left: 300px;
     margin-top: 25px;
     width: 13px;
-    color: #FF6B00;
+    color: #FF6B00;    
 }
 
-.acesso_txt {
+.acesso_txt2 {
     position: absolute;
     margin-left: 330px;
     margin-top: 40px;
@@ -107,8 +106,8 @@ input:focus-visible {
     color: orange;
 }
 
-.botoes{
-
+.botoes2{
+    
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -117,7 +116,7 @@ input:focus-visible {
     column-gap: 60px;
 }
 
-button {
+.botoes2 button {
     border-radius: 25px;
     height: 45px;
     width: 200px;
@@ -129,7 +128,7 @@ button {
     font-family: 'Poppins';
 }
 
-button:last-child {
+.botoes2 button:last-child {
     background-color: orange;
     border-style: solid;
     border: 1px;
@@ -137,15 +136,15 @@ button:last-child {
     cursor: pointer;
 }
 
-button:hover {
+.botoes2 button:hover {
     background-color: rgb(253, 119, 70);
 }
 
-button:first-child:hover {
+.botoes2 button:first-child:hover {
     background-color: rgb(206, 206, 206);
 }
 
-.container {
+.container2 {
     background-color: white;
     height: 470px;
     width: 750px;
@@ -156,14 +155,14 @@ button:first-child:hover {
 }
 
 
-.column {
+.column2 {
     display: grid;
-    row-gap: 30px;
+    row-gap: 30px;  
 }
 
 
 
-.row {
+.row2 {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     margin-left: -30px;
