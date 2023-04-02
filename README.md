@@ -46,7 +46,7 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
  
  # :bulb: Backlog
  <div align="left">
-  <img src="https://user-images.githubusercontent.com/89950512/229325444-e171a7b3-39d0-4da8-acce-36f021d00c91.png" width="500" height="300" alt="NodeJS logo">
+  <img src="https://github.com/4DeskGroup/API-2023.1/blob/main/doc_api2023.1/backlog/backlog_total.png?raw=true" width="500" height="300" alt="NodeJS logo">
 
  </div>
  
@@ -61,7 +61,7 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
 # :computer: Tecnologias 
 
 <div align="left">
-  <img src="https://user-images.githubusercontent.com/89950512/229325532-852289d7-c272-4e13-a9f9-847a90bbf31f.png" width="500" height="300" alt="NodeJS logo">
+  <img src="https://github.com/4DeskGroup/API-2023.1/blob/main/doc_api2023.1/backlog/backlog1.png?raw=true" width="500" height="300" alt="NodeJS logo">
 
  </div>
 
