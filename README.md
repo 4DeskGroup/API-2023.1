@@ -44,24 +44,26 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
  
  #### :white_large_square: Feira de Soluções - 13/06/2023 à 14/06/2023
  
- # 🗂️ Cards das Sprints
+ # :bulb: Backlog
+ <div align="left">
+  <img src="https://user-images.githubusercontent.com/89950512/229325444-e171a7b3-39d0-4da8-acce-36f021d00c91.png" width="500" height="300" alt="NodeJS logo">
 
-# :computer: Tecnologias Utilizadas
-
-
-<div align="center">
-  <img src="https://download.logo.wine/logo/Node.js/Node.js-Logo.wine.png" width="100" height="60" alt="NodeJS logo">
-
-  <img src="https://i0.wp.com/programmingwithmosh.com/wp-content/uploads/2019/01/2000px-React-icon.svg_.png?fit=2000%2C1413&ssl=1" width="70" height="50" alt="React logo"> 
+ </div>
  
-  <img src="https://logonoid.com/images/postgresql-logo.png" width="100" height="100" alt="Postgre logo">
-</div>
+ 
+ # 🗂️ Cards das Sprints
+  <div align="left">
+  <img src="https://user-images.githubusercontent.com/89950512/229325493-16d186d9-c562-4d09-a0dc-43111c7c4ce0.png" width="500" height="300" alt="NodeJS logo">
+
+ </div>
 
 
+# :computer: Tecnologias 
 
+<div align="left">
+  <img src="https://user-images.githubusercontent.com/89950512/229325532-852289d7-c272-4e13-a9f9-847a90bbf31f.png" width="500" height="300" alt="NodeJS logo">
 
-
-# :bulb: Backlog
+ </div>
 
 
 # 🎓 Equipe
