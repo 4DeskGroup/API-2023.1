@@ -53,7 +53,7 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
  
  # 🗂️ Cards das Sprints
   <div align="left">
-  <img src="https://user-images.githubusercontent.com/89950512/229325493-16d186d9-c562-4d09-a0dc-43111c7c4ce0.png" width="500" height="300" alt="NodeJS logo">
+  <img src="https://github.com/4DeskGroup/API-2023.1/blob/main/doc_api2023.1/backlog/backlog1.png?raw=true" width="500" height="300" alt="NodeJS logo">
 
  </div>
 
@@ -61,7 +61,7 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
 # :computer: Tecnologias 
 
 <div align="left">
-  <img src="https://github.com/4DeskGroup/API-2023.1/blob/main/doc_api2023.1/backlog/backlog1.png?raw=true" width="500" height="300" alt="NodeJS logo">
+  <img src="https://user-images.githubusercontent.com/102293897/229385716-2bc9b3f3-7734-4ee7-9138-7d89072e3c53.png" width="500" height="300" alt="NodeJS logo">
 
  </div>
 
