@@ -1,17 +1,22 @@
 
 import "./tabela.css";
 import Navbar from ".././../components/Navbar";
+import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 
 function Lista({users}) {
-//const [users, setUsers] = useState()
+  
+  function statusValida(item){
+  if (item.status === "ativo") {
+    return 'success'
+  } else {
+    return 'danger'
+  }}
 
-  // useEffect(() => {
-  //   Axios.get("http://localhost:3001/getInfo").then((response) => {
-  //     console.log(response);
-  //   });
-  // }, []);
 
 
+  
   return (
     <>
     <Navbar/>
@@ -25,30 +30,59 @@ function Lista({users}) {
       </div>
 
       <div className="fundo3">
-        
-          <table className="tabela3">
-            <thead>
-              <div className="alinha">
-              <tr>
-                <th className="a4">ㅤㅤㅤㅤUsuarioㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
-                <th className="b4">Cadastroㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
-                <th className="c4">Statusㅤㅤㅤ</th>
-                <th className="d4">Tipo</th>
-              </tr>
+      <MDBTable align='middle'>
+      <MDBTableHead>
+        <tr>
+          <th scope='col' className='fw-bold mb-1'>ㅤLogin</th>
+          <th scope='col' className='fw-bold mb-1'>ㅤㅤㅤCadstro</th>
+          <th scope='col' className='fw-bold mb-1'>Status</th>
+          <th scope='col' className='fw-bold mb-1'>ㅤTipo</th>
+          <th scope='col' className='fw-bold mb-1'>ㅤㅤㅤAções</th>
+        </tr>
+      </MDBTableHead>
+      <MDBTableBody >{users.map((item, i )=>(
+        <tr key={i}>
+          <td >
+            <div className='d-flex align-items-center'>
+              <div className='ms-3'>
+                <p className='fw-normal mb-1'>{item.login}</p>
               </div>
-            </thead>
-            <body>
-              {users.map((item, i )=>(
+            </div>
+          </td>
+          <td>
+            <p className='fw-normal mb-1'>{item.datacadastro}</p>
+          </td>
+          <td>
+            <MDBBadge color={statusValida(item)} pill>
+            {item.status}
+            </MDBBadge>
+          </td>
+          <td>{item.usuariotipo}</td>
+          <td>
+            <MDBBtn color='link' rounded size='sm' >
+              Editar
+            </MDBBtn>
+            <MDBBtn  color="link" rounded size="sm">
+            Desativar                     
+            </MDBBtn>
+              
+          </td>
+        </tr>
+       ))}
+      </MDBTableBody> 
+    </MDBTable>
+
+          
+              {/* {users.map((item, i )=>(
                   <tr key = {i} className="tr4">
                     <td className="td4Login"> {item.login} </td>
                     <td className="td4Data"> {item.datacadastro} </td>
                     <td className="td4Status"> {item.status} </td>
                     <td className="td4Tipo"> {item.usuariotipo} </td>
                   </tr>
-              ))}
+              ))} */}
 
-            </body>
-          </table>
+            
         
       </div>
     </div>
