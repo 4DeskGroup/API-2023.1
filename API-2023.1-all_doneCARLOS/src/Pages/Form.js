@@ -16,7 +16,21 @@ export function Form() {
         [value.target.name]: value.target.value,
       }))
       desabilitaCadastro()
+      
     };
+
+    function senhasIncompativeis(){
+      if(document.getElementById('obg5').value !== document.getElementById('obg6').value){
+        console.log('senhas incompativeis');
+        document.getElementById('obg6').style.borderColor = 'red'
+        document.getElementById('obg5').style.borderColor = 'red'
+      }
+      else{
+        console.log('senhas compativeis');
+        document.getElementById('obg6').style.borderColor = 'green'
+        document.getElementById('obg5').style.borderColor = 'green'
+      }
+    }
 
     function desabilitaCadastro(){
       if(validaVazio() === true || validaSenha() === false){
@@ -65,6 +79,8 @@ export function Form() {
       document.getElementById('obg4').value = ''
       document.getElementById('obg5').value = ''
       document.getElementById('obg6').value = ''
+      document.getElementById('obg6').style.borderColor = 'orange'
+      document.getElementById('obg5').style.borderColor = 'orange'
     }
 
     const validaSenha = ()=>{
@@ -166,7 +182,11 @@ export function Form() {
                   type="password"
                   name="confirmpassword"
                   className="confirmpassword--input"
-                  onChange={handleChangeValues}
+                  onChange={(event) => {
+                    handleChangeValues(event);
+                    senhasIncompativeis(event);
+                  }}
+                  
                   placeholder="Confirmar Senha"
                 />
               </div>
