@@ -163,6 +163,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -179,3 +180,49 @@
     margin-left: -30px;
 }
 
+/* .popup{
+    height: 300px;
+    width: 300px;
+    align-items: center;
+
+}
+
+ReactModal{
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+}
+.popupdiv{
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+} */
+
+.form-pop-up{
+    background-color: rgb(198, 196, 196);
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    border-radius: 30px;
+    margin-left: 23%;
+    margin-top: 5%;
+}
+
+.container-pop {
+    background-color: white;
+    
+    height: 470px;
+    width: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
