@@ -1,11 +1,14 @@
+import Navbar from "../components/Navbar";
+import BottomNavbar from "../components/BottomNavbar";
 import React, { useState } from "react";
-import './CSS/form.css'
+import './CSS/edicao.css'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 //Swal = require('sweetalert2')
 
-export function EditarPopup() {
+
+export function Edicao() {
     const [values, setValues] = useState();
     const navigate = useNavigate();
     const handleChangeValues = (value)=>{
@@ -126,13 +129,23 @@ export function EditarPopup() {
 
     return (
       
-        <form className="form-pop-up">
-          <div className="container-pop">
+      <div className="fundo">
+      <Navbar/>
+      
+        <div className="cabecalho2">
+          <div className="container_linha2">
+            <h1>Editar informações</h1>
+            <hr className='title-hr'></hr>
+          </div>
+        </div>
+        <form className="form2">
+          <div className="container2">
             <p className="sub_titulo2">
-              Preencha os campos abaixo com seus dados:
+              Verifique os dados, caso necessário corrija-os.
             </p>
             <div className="row2">
               <div className="column2">
+                <label className="label1">Login</label>
               <input id="obg1"
                   type="login"
                   name="login"
@@ -140,6 +153,7 @@ export function EditarPopup() {
                   onChange={handleChangeValues}
                   placeholder="Login"
                 />
+                <label className="label1">Nome</label>
                 <input id="obg2"
                   type="firstname"
                   name="firstname"
@@ -147,15 +161,10 @@ export function EditarPopup() {
                   onChange={handleChangeValues}
                   placeholder="Nome"
                 />
-                <input id="obg3"
-                  type="lastname"
-                  name="lastname"
-                  className="lname--input"
-                  onChange={handleChangeValues}
-                  placeholder="Sobrenome"
-                />
+                
               </div>
               <div className="column2">
+                <label className="label2">E-mail</label>
                 <input
                   id="obg4"
                   type="email"
@@ -164,7 +173,15 @@ export function EditarPopup() {
                   onChange={handleChangeValues}
                   placeholder="E-mail"
                 />
-                <input
+                <label className="label2">Data de cadastro</label>
+                <input id="obg3"
+                  type="date"
+                  name="date"
+                  className="ldate--input"
+                  onChange={handleChangeValues}
+                  placeholder="Data de cadastro"
+                />
+              {/*}  <input
                   id="obg5"
                   type="password"
                   name="password"
@@ -182,7 +199,7 @@ export function EditarPopup() {
                   }}
                   
                   placeholder="Confirmar Senha"
-                />
+                /> */}
               </div>
               {/* <div className="conteiner_termo2">
                 <div className="termosAcesso2">
@@ -198,9 +215,13 @@ export function EditarPopup() {
           <div className="botoes2" onLoad='desabilitaCadastro()'>
             <button onClick={()=>[navigate ('/')]}>voltar</button>
             <button id = 'btnCadastro' type="button" className="register--button2" 
-            onClick={()=>handleClickButton()}> cadastrar </button>
+            onClick={()=>handleClickButton()}> confirmar </button>
           </div>
         </form>
+        
+        <BottomNavbar/>
+        </div>
+       
       
     );
 }
