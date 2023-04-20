@@ -181,35 +181,8 @@ export function Edicao() {
                   onChange={handleChangeValues}
                   placeholder="Data de cadastro"
                 />
-              {/*}  <input
-                  id="obg5"
-                  type="password"
-                  name="password"
-                  className="name--input"
-                  onChange={handleChangeValues}
-                  placeholder="Senha"
-                />
-                <input  id="obg6"
-                  type="password"
-                  name="confirmpassword"
-                  className="confirmpassword--input"
-                  onChange={(event) => {
-                    handleChangeValues(event);
-                    senhasIncompativeis(event);
-                  }}
-                  
-                  placeholder="Confirmar Senha"
-                /> */}
-              </div>
-              {/* <div className="conteiner_termo2">
-                <div className="termosAcesso2">
-                  <input type="checkbox" className="checkbox2" id="checkbox"/>
-                  <label for="checkbox" className="acesso_txt2">
-                    Li e aceito os termos de acesso
-                  </label>
                 </div>
-              </div> */}
-            </div>
+              </div>
           </div>
 
           <div className="botoes2" onLoad='desabilitaCadastro()'>
