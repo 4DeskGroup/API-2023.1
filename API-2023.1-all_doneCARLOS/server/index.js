@@ -10,6 +10,7 @@ const cliente = new Pool({
   password: "1234",
   database: "visiona",
 });
+
 function buscaUsuario(login, senha, res) {
   cliente.query(
     "SELECT * FROM usuarios WHERE login = '" + login + "';",
@@ -18,10 +19,15 @@ function buscaUsuario(login, senha, res) {
         console.log("erro query:", err);
       }
       if (result.rows.length === 1) {
-        const senhaD = result.rows.values().next().value.senha;
-        bcrypt.compare(senha, senhaD, function(err, result) {
-          if (result) {
-            res.send({ msg: "Usuário logado com sucesso" });
+        const senhaUser = result.rows.values().next().value.senha;
+        const tipoUser = result.rows.values().next().value.usuariotipo;
+        const statusUser = result.rows.values().next().value.status;
+        const idUser    = result.rows.values().next().value.id;
+        bcrypt.compare(senha, senhaUser, function(err, result) {
+          if (result && statusUser === 'ativo') {
+            const mensagem = 'Usuário logado com sucesso'
+            const data = {msg:mensagem, tipoUser:tipoUser, id:idUser}
+            res.send(data);
           } else {
             res.send({ msg: "Usuário não encontrado" });
           }
@@ -92,6 +98,109 @@ function setUsuario(
   });
 }
 
+
+function userAtivo(res) {
+  cliente.query(
+    "select * from usuarios where status = 'ativo';",
+    (err, result) => {
+      if (err) {
+        console.log("erro query:", err);
+      }
+      var statusAtivo
+      if (result.rows.length > 0) {
+        statusAtivo = result.rows.length
+        //console.log(statusAtivo+ 'ativo')
+        //const data = {ativo: statusAtivo}
+        //localStorage.setItem('userAtivo', statusAtivo)
+        const userStatus= {userStatus:statusAtivo}
+        res.send(userStatus)
+      }
+    }
+  );
+}
+
+function userInativo(res) {
+  cliente.query("select * from usuarios where status = 'inativo';",
+    (err, result) => {
+      if (err) {
+        console.log("erro query:", err);
+      }
+      var statusInativo
+      if (result.rows.length > 0) {
+        statusInativo = result.rows.length
+        //console.log(statusInativo + 'inativo')
+        //localStorage.setItem('userInativo', statusInativo)
+        const userStatus = {userStatus:statusInativo}
+        res.send(userStatus)
+      }
+    }
+  );
+}
+
+
+function populaUser(userId, res) {
+  cliente.query(
+    "SELECT * FROM usuarios WHERE id = " + userId + ";",
+    (err, result) => {
+      if (err) {
+        console.log("erro query:", err);
+      }
+      if (result.rows.length === 1) {
+        const senhaUser = result.rows.values().next().value.senha;
+        const tipoUser = result.rows.values().next().value.usuariotipo;
+        //const statusUser = result.rows.values().next().value.status;
+        const nomeUser =  result.rows.values().next().value.nome;
+        const loginUser = result.rows.values().next().value.login;
+        const emailUser = result.rows.values().next().value.email;
+        //const idUser    = result.rows.values().next().value.id;
+        const mensagem = 'Usuário logado com sucesso'
+        const data = {msg:mensagem, tipoUser:tipoUser, senha:senhaUser, nome:nomeUser, login:loginUser, email:emailUser }
+            res.send(data);
+          }else {
+            res.send({ msg: "Usuário não encontrado" });
+        }
+    }
+  );
+}
+
+
+// function atualizaUser(
+//   login,
+//   nome,
+//   email,
+//   datacadastro,
+//   userId,
+//   res
+// ) {
+//         cliente.query(
+//           "UPDATE usuarios SET login = ?, nome = ?, email = ?, datacadastro = ? WHERE id = ?",
+//           [login, nome, email, datacadastro, userId],
+//         (err, result) => {
+//           if (err) {
+//             console.log("erro SQL", err);
+//           } else{
+//              res.send({msg: "Usuário cadastrado com sucesso"})
+//            };
+//         }
+//       );
+//   }
+
+function atualizaUser(login, nome, email, datacadastro, userId, res) {
+  cliente.query(
+    "UPDATE usuarios SET login = '" + login + "', nome = '" + nome + "', email = '" + email + "', datacadastro = '" + datacadastro + "' WHERE id = " + userId + ";",
+    (err, result) => {
+      if (err) {
+        console.log("erro SQL", err);
+      } else{
+         res.send({msg: "Usuário atualizado com sucesso."})
+       };
+    }
+  );
+}
+
+
+
+
 app.use(cors());
 app.use(express.json());
 
@@ -110,7 +219,7 @@ app.post("/cadastro", async (req, res) => {
   const { password } = req.body;
   const { date } = req.body;
   const status = "ativo";
-  const usuarioTipo = "ADM";
+  const usuarioTipo = "NORMAL";
 
   const existee = await existeUser(login);
 
@@ -133,7 +242,7 @@ app.post("/cadastro", async (req, res) => {
 
 app.get("/getInfo", (req, res) => {
   cliente.query(
-    "select login, status, usuarioTipo, dataCadastro from usuarios ORDER BY dataCadastro DESC",
+    "select * from usuarios ORDER BY dataCadastro DESC",
     (err, result) => {
       if (err) console.log(err);
       else res.json(result.rows);
@@ -141,7 +250,7 @@ app.get("/getInfo", (req, res) => {
   );
 });
 
-//ativar/desativar usuário
+// ativar/desativar usuário
 app.delete("/usuarios/:login", (req, res) => {
   const login = req.params.login;
   cliente.query(
@@ -188,6 +297,40 @@ app.delete("/usuarios/:login", (req, res) => {
     }
   );
 });
+
+app.post('/editar', (req,res) => {
+  const { userId } = req.body//localStorage.getItem('user');
+
+  populaUser(userId, res)
+})
+
+app.post("/confirmarEditar", (req, res) => {
+  const { firstname } = req.body;
+  const { userId } = req.body
+  const { login } = req.body;
+  const { email } = req.body;
+
+  const  date = new Date().toLocaleString();
+
+  atualizaUser(
+    login,
+    firstname, //+ " " + lastname,
+    email,
+    date,
+    userId,
+    res
+  );
+  });
+
+app.get("/userAtivo", (req, res) => {
+
+  userAtivo(res)
+});
+app.get("/userInativo", (req, res) => {
+
+  userInativo(res)
+});
+
 
 app.listen(3001, () => {
   console.log("rodando servidor");

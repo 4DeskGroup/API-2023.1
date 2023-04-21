@@ -18,7 +18,7 @@ font-size: smaller;
 position: absolute;
 align-items: center;
 justify-content: center;
-width: 1000px;
+width: 1100px;
 border-left: 500px;
 top: 200px;
 background: #F9F9F9;
@@ -28,6 +28,7 @@ font-family: 'Poppins';
 }
 
 .content3{
+
   background: #FFFFFF;
   border-radius: 15px;
   width: 900px;

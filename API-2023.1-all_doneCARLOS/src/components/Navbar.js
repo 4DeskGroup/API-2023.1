@@ -2,16 +2,32 @@ import React, { Component } from "react";
 import logo from "./logo.jpg";
 import './NavbarStyles.css'
 import { NavLink } from "react-router-dom";
+
 class Navbar extends Component {
+  componentDidMount(){
+    this.validaUser();
+  }
   state = { clicked: false };
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
 
+  validaUser(){
+    const tipoUser = localStorage.getItem('tipoUser')
+    if(tipoUser !== 'ADM'){
+      document.getElementById('btnTabela').style.display = 'none'
+      document.getElementById('btnDashboard').style.display = 'none'
+    }else{
+      document.getElementById('btnEditar').style.display = 'none'
+    }
+  }
+
+
   render() {
     return (
       <>
         <nav>
+
           <a href="welcome">
             <img src={logo} className="logo_visiona" alt="logo"></img>
           </a>
@@ -21,10 +37,13 @@ class Navbar extends Component {
               <NavLink className="link_nav" to="/welcome">home</NavLink>
               </li>
               <li>
-              <NavLink className="link_nav" to="/welcome">dashboard</NavLink>
+              <NavLink id = 'btnDashboard' className="link_nav" to="/dashboard">dashboard</NavLink>
               </li>
               <li>
-                <NavLink className="link_nav" to="/tabela">usuários</NavLink>
+                <NavLink id='btnTabela' className="link_nav" to="/tabela">usuários</NavLink>
+              </li>
+              <li>
+                <NavLink id='btnEditar' className="link_nav" to="/edicao">editar</NavLink>
               </li>
             </ul>
           </div>
@@ -45,7 +64,7 @@ class Navbar extends Component {
               <a href="/index.js">Editar conta</a>
             </li> */}
             <li>
-            <NavLink className="link_nav" to="/">Log out</NavLink>
+            <NavLink className="link_nav" to="/" >Log out</NavLink>
             </li>
           </ul>
         </div>

@@ -3,7 +3,7 @@ import './CSS/form.css'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
-//Swal = require('sweetalert2')
+import { MDBCheckbox } from 'mdb-react-ui-kit';
 
 export function Form() {
     const [values, setValues] = useState();
@@ -126,14 +126,14 @@ export function Form() {
 
     return (
       
-      <div>
+      <div className="form-body">
         <div className="cabecalho2">
           <div className="container_linha2">
             <p className="cad_titulo2">Cadastre-se</p>
           </div>
         </div>
         <form className="form2">
-          <div className="container2">
+          <div className="container-form">
             <p className="sub_titulo2">
               Preencha os campos abaixo com seus dados:
             </p>
@@ -190,18 +190,22 @@ export function Form() {
                   placeholder="Confirmar Senha"
                 />
               </div>
-              {/* <div className="conteiner_termo2">
+
+            </div>
+          </div>
+
+          <div className="botoes2" onLoad='desabilitaCadastro()'>
+          <div className="conteiner_termo2">
+              <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Li e aceito os termos de acesso'/>
+              {/* 
                 <div className="termosAcesso2">
                   <input type="checkbox" className="checkbox2" id="checkbox"/>
                   <label for="checkbox" className="acesso_txt2">
                     Li e aceito os termos de acesso
                   </label>
                 </div>
-              </div> */}
-            </div>
-          </div>
-
-          <div className="botoes2" onLoad='desabilitaCadastro()'>
+               */}
+               </div>
             <button onClick={()=>[navigate ('/')]}>voltar</button>
             <button id = 'btnCadastro' type="button" className="register--button2" 
             onClick={()=>handleClickButton()}> cadastrar </button>
