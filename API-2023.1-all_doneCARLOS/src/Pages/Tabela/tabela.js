@@ -1,5 +1,6 @@
 import "./tabela.css";
 import Navbar from ".././../components/Navbar";
+import { EditarPopup } from "../EditarPopup";
 import {
   MDBBadge,
   MDBBtn,
@@ -7,19 +8,45 @@ import {
   MDBTableHead,
   MDBTableBody,
 } from "mdb-react-ui-kit";
-
+import ReactModal from "react-modal";
+import { Component, useState } from "react";
 
 function Lista({ users }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleModal() {
+    setIsOpen(!isOpen);
+  }
+
+  async function editUsers(item) {
+    const tableLogin = item.login;
+    const tableNome = item.nome;
+    const tableSenha = item.senha;
+    const tableEmail = item.email;
+    const tableTipo = item.usuariotipo;
+    const tableId = item.id
+    const tableData = {
+      tableLogin: tableLogin,
+      tableNome: tableNome,
+      tableSenha: tableSenha,
+      tableEmail: tableEmail,
+      tableTipo: tableTipo,
+      tableId : tableId
+    };
+    console.log(tableData);
+    localStorage.setItem("tableUser", JSON.stringify(tableData));
+    
+  }
 
   async function modifyStatus(item) {
     fetch(`http://localhost:3001/usuarios/${item.login}`, {
-  method: "DELETE",
-  
-})
-  .then((response) => response.json())
-  .then((data) => console.log(data))
-  .catch((error) => console.log(error));
-  window.location.reload(false);}
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+    window.location.reload(false);
+  }
 
   function statusValida(item) {
     if (item.status === "ativo") {
@@ -27,7 +54,6 @@ function Lista({ users }) {
     } else {
       return "danger";
     }
-    
   }
 
   return (
@@ -43,6 +69,16 @@ function Lista({ users }) {
         </div>
 
         <div className="fundo3">
+          <div className="popupdiv">
+            <ReactModal
+              className="popup"
+              isOpen={isOpen}
+              onRequestClose={toggleModal}
+            >
+              <EditarPopup />
+            </ReactModal>
+          </div>
+
           <MDBTable align="middle">
             <MDBTableHead>
               <tr>
@@ -50,7 +86,7 @@ function Lista({ users }) {
                   ㅤLogin
                 </th>
                 <th scope="col" className="fw-bold mb-1">
-                  ㅤㅤㅤCadstro
+                  ㅤㅤㅤCadastro
                 </th>
                 <th scope="col" className="fw-bold mb-1">
                   Status
@@ -83,14 +119,22 @@ function Lista({ users }) {
                   </td>
                   <td>{item.usuariotipo}</td>
                   <td>
-                    <MDBBtn color="link" rounded size="sm" >
-                      Edit
+                    <MDBBtn
+                      color="link"
+                      rounded
+                      size="sm"
+                      onClick={() => {
+                        toggleModal();
+                        editUsers(item);
+                      }}
+                    >
+                      Editar
                     </MDBBtn>
                     <MDBBtn
                       color="link"
                       rounded
                       size="sm"
-                     onClick={() => modifyStatus(item)}
+                      onClick={() => modifyStatus(item)}
                     >
                       {item.status === "ativo" ? "Desativar" : "Ativar"}
                     </MDBBtn>

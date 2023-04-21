@@ -4,7 +4,7 @@ import Login from "../Pages/login";
 import Welcome from "../Pages/Welcome";
 import Table from "../Pages/Tabela/Table";
 import Dashboard from "../Pages/Dashboard";
-import { EditarPopup } from "../Pages/EditarPopup";
+import { Edicao } from "../Pages/edicao";
 
 export const Rotas = () => {
     return (
@@ -15,8 +15,8 @@ export const Rotas = () => {
                 <Route path="/form" element={<Form />} />
                 <Route path="/welcome" element={<Welcome />} />
                 <Route path="/tabela" element={<Table />} />
-                <Route path= "/dashboard" element={<Dashboard />} />
-                <Route path= "/editarpopup" element={<EditarPopup />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/edicao" element={<Edicao />} />
             </Routes>
         </BrowserRouter>
     )

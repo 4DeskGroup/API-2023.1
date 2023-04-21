@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CSS/LoginCSS.css";
 
 import axios from "axios";
@@ -10,6 +10,9 @@ import Swal from 'sweetalert2'
 import { ErrorMessage, Formik, Form, Field } from "formik";
 
 function Login() {
+  useEffect(()=>{
+    localStorage.clear()
+  })
 
   const [values, setValues] = useState();
   const navigate = useNavigate();
@@ -42,6 +45,8 @@ function Login() {
     }).then((response)=>{
       console.log(response.data);
       if(response.data.msg === "Usuário logado com sucesso" ){
+        localStorage.setItem('user', response.data.id)
+        localStorage.setItem('tipoUser', response.data.tipoUser)
         Swal.fire(
           'Sucesso!',
           response.data.msg,

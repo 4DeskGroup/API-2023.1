@@ -1,11 +1,25 @@
-import React, { useState } from "react";
-import './CSS/form.css'
+import React, { useEffect, useState } from "react";
+import './CSS/pop-up-css.css'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 //Swal = require('sweetalert2')
 
 export function EditarPopup() {
+// popular campos 
+  useEffect(()=>{
+
+    const tableDataJson = localStorage.getItem('tableUser')
+    const tableData = JSON.parse(tableDataJson)
+    console.log(tableData);
+
+    document.getElementById('obg1').value = tableData.tableLogin
+    document.getElementById('obg2').value = tableData.tableNome
+    document.getElementById('obg4').value = tableData.tableEmail
+    document.getElementById('obg5').value = tableData.tableTipo
+    document.getElementById('obg5').disabled = true
+    document.getElementById('obg5').style.background = '#d0cece'
+  },[])
     const [values, setValues] = useState();
     const navigate = useNavigate();
     const handleChangeValues = (value)=>{
@@ -19,21 +33,21 @@ export function EditarPopup() {
       
     };
 
-    function senhasIncompativeis(){
-      if(document.getElementById('obg5').value !== document.getElementById('obg6').value){
-        console.log('senhas incompativeis');
-        document.getElementById('obg6').style.borderColor = 'red'
-        document.getElementById('obg5').style.borderColor = 'red'
-      }
-      else{
-        console.log('senhas compativeis');
-        document.getElementById('obg6').style.borderColor = 'green'
-        document.getElementById('obg5').style.borderColor = 'green'
-      }
-    }
+    // function senhasIncompativeis(){
+    //   if(document.getElementById('obg5').value !== document.getElementById('obg6').value){
+    //     console.log('senhas incompativeis');
+    //     document.getElementById('obg6').style.borderColor = 'red'
+    //     document.getElementById('obg5').style.borderColor = 'red'
+    //   }
+    //   else{
+    //     console.log('senhas compativeis');
+    //     document.getElementById('obg6').style.borderColor = 'green'
+    //     document.getElementById('obg5').style.borderColor = 'green'
+    //   }
+    // }
 
     function desabilitaCadastro(){
-      if(validaVazio() === true || validaSenha() === false){
+      if(validaVazio() === true){
         document.getElementById('btnCadastro').disabled = true
         document.getElementById('btnCadastro').style.background = 'rgb(250, 186, 75)'
         document.getElementById('btnCadastro').style.cursor = 'not-allowed'
@@ -54,10 +68,10 @@ export function EditarPopup() {
         isVazio = true
         return isVazio
       }
-      if(document.getElementById('obg3').value === ''){
-        isVazio = true
-        return isVazio
-      }
+      // if(document.getElementById('obg3').value === ''){
+      //   isVazio = true
+      //   return isVazio
+      // }
       if(document.getElementById('obg4').value === ''){
         isVazio = true
         return isVazio
@@ -66,80 +80,82 @@ export function EditarPopup() {
         isVazio = true
         return isVazio
       }
-      if(document.getElementById('obg6').value === ''){
-        isVazio = true
-        return isVazio
-      }
+      // if(document.getElementById('obg6').value === ''){
+      //   isVazio = true
+      //   return isVazio
+      // }
     }
 
-    const limpaCampos = ()=>{
-      document.getElementById('obg1').value = ''
-      document.getElementById('obg2').value = ''
-      document.getElementById('obg3').value = ''
-      document.getElementById('obg4').value = ''
-      document.getElementById('obg5').value = ''
-      document.getElementById('obg6').value = ''
-      document.getElementById('obg6').style.borderColor = 'orange'
-      document.getElementById('obg5').style.borderColor = 'orange'
-    }
+    // const limpaCampos = ()=>{
+    //   document.getElementById('obg1').value = ''
+    //   document.getElementById('obg2').value = ''
+    //   // document.getElementById('obg3').value = ''
+    //   document.getElementById('obg4').value = ''
+    //   document.getElementById('obg5').value = ''
+    //   // document.getElementById('obg6').value = ''
+    //   // document.getElementById('obg6').style.borderColor = 'orange'
+    //   document.getElementById('obg5').style.borderColor = 'orange'
+    // }
 
-    const validaSenha = ()=>{
-      if (document.getElementById('obg5').value !== document.getElementById('obg6').value){
-        let isIgual = false
-        return isIgual
-      }else{
-        let isIgual = true
-        return isIgual
-      }
+    // const validaSenha = ()=>{
+    //   if (document.getElementById('obg5').value !== document.getElementById('obg6').value){
+    //     let isIgual = false
+    //     return isIgual
+    //   }else{
+    //     let isIgual = true
+    //     return isIgual
+    //   }
 
-    }
+    // }
 
     const handleClickButton = () =>{
-      
-        desabilitaCadastro()
-        const date = new Date().toLocaleString();
-        axios.post("http://localhost:3001/cadastro", {
-          login: values.login,
-          firstname: values.firstname,
-          lastname: values.lastname,
-          email: values.email,
-          password: values.password,
-          date: date
-        }).then((response)=>{
-          if (response.data.msg === 'Usuario ja cadastrado.'){
-            Swal.fire({
-              icon: 'error',
-              title: 'Erro',
-              text: response.data.msg,
-            })
-          }
-          if (response.data.msg === 'Usuário cadastrado com sucesso.'){
-          limpaCampos()
-          Swal.fire(
-            'Sucesso!',
-            response.data.msg,
-            'success'
-          )
-          }
-        });
+      const tableDataJson = localStorage.getItem('tableUser')
+      const tableData = JSON.parse(tableDataJson)
+      desabilitaCadastro()
+      axios.post("http://localhost:3001/confirmarEditar", {
+        login: document.getElementById('obg1').value,
+        firstname: document.getElementById('obg2').value,
+        userId : tableData.tableId,
+        email: document.getElementById('obg4').value,
+      }).then((response)=>{
+        if (response.data.msg === ''){
+          Swal.fire({
+            icon: 'error',
+            title: 'Erro',
+            text: response.data.msg,
+          })
         }
+        if (response.data.msg === 'Usuário atualizado com sucesso.'){
+        Swal.fire(
+          'Sucesso!',
+          response.data.msg,
+          'success'
+        ).then(function(){
+          navigate ('/welcome')
+        })
+        }
+      });
+  }
 
     return (
       
         <form className="form-pop-up">
           <div className="container-pop">
-            <p className="sub_titulo2">
-              Preencha os campos abaixo com seus dados:
+            <p className="sub_titulo-edit">
+                Edite as informações do usuário selecionado:
             </p>
             <div className="row2">
               <div className="column2">
-              <input id="obg1"
+              <label for="nome" class="input-label">Login:</label>
+              <input id="obg1" 
                   type="login"
                   name="login"
                   className="login--input"
                   onChange={handleChangeValues}
                   placeholder="Login"
+                  
                 />
+                <label for="nome" class="input-label1">Nome:</label>
                 <input id="obg2"
                   type="firstname"
                   name="firstname"
@@ -147,15 +163,16 @@ export function EditarPopup() {
                   onChange={handleChangeValues}
                   placeholder="Nome"
                 />
-                <input id="obg3"
+                {/* <input id="obg3"
                   type="lastname"
                   name="lastname"
                   className="lname--input"
                   onChange={handleChangeValues}
                   placeholder="Sobrenome"
-                />
+                /> */}
               </div>
               <div className="column2">
+              <label for="nome" class="input-label2">E-mail:</label>
                 <input
                   id="obg4"
                   type="email"
@@ -164,15 +181,15 @@ export function EditarPopup() {
                   onChange={handleChangeValues}
                   placeholder="E-mail"
                 />
+                <label for="nome" class="input-label3">Tipo:</label>
                 <input
                   id="obg5"
-                  type="password"
                   name="password"
                   className="name--input"
                   onChange={handleChangeValues}
                   placeholder="Senha"
                 />
-                <input  id="obg6"
+                {/* <input  id="obg6"
                   type="password"
                   name="confirmpassword"
                   className="confirmpassword--input"
@@ -182,7 +199,7 @@ export function EditarPopup() {
                   }}
                   
                   placeholder="Confirmar Senha"
-                />
+                /> */}
               </div>
               {/* <div className="conteiner_termo2">
                 <div className="termosAcesso2">
@@ -195,10 +212,10 @@ export function EditarPopup() {
             </div>
           </div>
 
-          <div className="botoes2" onLoad='desabilitaCadastro()'>
-            <button onClick={()=>[navigate ('/')]}>voltar</button>
+          <div className="botoes2-edit" onLoad='desabilitaCadastro()'>
+            <button onClick={()=>[navigate ('/tabela')]}>voltar</button>
             <button id = 'btnCadastro' type="button" className="register--button2" 
-            onClick={()=>handleClickButton()}> cadastrar </button>
+            onClick={()=>handleClickButton()}> editar </button>
           </div>
         </form>
       
