@@ -114,6 +114,9 @@ function userAtivo(res) {
         //localStorage.setItem('userAtivo', statusAtivo)
         const userStatus= {userStatus:statusAtivo}
         res.send(userStatus)
+      }else{
+        userStatus= {userStatus:0}
+        res.send(userStatus)
       }
     }
   );
@@ -131,6 +134,9 @@ function userInativo(res) {
         //console.log(statusInativo + 'inativo')
         //localStorage.setItem('userInativo', statusInativo)
         const userStatus = {userStatus:statusInativo}
+        res.send(userStatus)
+      }else{
+        userStatus = {userStatus:0}
         res.send(userStatus)
       }
     }
