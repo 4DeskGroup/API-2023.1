@@ -185,9 +185,9 @@ function populaUser(userId, res) {
 //       );
 //   }
 
-function atualizaUser(login, nome, email, datacadastro, userId, res) {
+function atualizaUser(login, nome, email, datacadastro, userId, tipo, res) {
   cliente.query(
-    "UPDATE usuarios SET login = '" + login + "', nome = '" + nome + "', email = '" + email + "', datacadastro = '" + datacadastro + "' WHERE id = " + userId + ";",
+    "UPDATE usuarios SET login = '" + login + "', nome = '" + nome + "', email = '" + email +  "', usuariotipo = '" + tipo + "', datacadastro = '" + datacadastro + "' WHERE id = " + userId + ";",
     (err, result) => {
       if (err) {
         console.log("erro SQL", err);
@@ -309,7 +309,7 @@ app.post("/confirmarEditar", (req, res) => {
   const { userId } = req.body
   const { login } = req.body;
   const { email } = req.body;
-
+  const { tipo } = req.body;
   const  date = new Date().toLocaleString();
 
   atualizaUser(
@@ -318,6 +318,7 @@ app.post("/confirmarEditar", (req, res) => {
     email,
     date,
     userId,
+    tipo,
     res
   );
   });

@@ -248,3 +248,44 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     top: 183px;
     left: 440px;
   }
+
+  .cbx{
+    border-radius: 30px;
+    width: 230px;
+    height: 50px;
+    background: none;
+    border: orange;
+    border-style: solid;
+    border-width: 1.5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgb(122, 122, 119);
+    margin-left: 75px;
+    font-family: 'Poppins';
+    background-position: 10px center; 
+  }
+
+  select  {
+    padding-right: 30px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+  }
+
+  .cbx select {
+    text-indent: 5px;
+    padding-right: 25px;
+    padding-right: 30px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+  }
+
+option {
+    border-radius: 50px;
+    color: #FF6B00;
+}
+
+option:hover{
+  background-color: #a9a9a9;
+}

@@ -7,6 +7,9 @@ import {
   MDBTable,
   MDBTableHead,
   MDBTableBody,
+  MDBPagination,
+  MDBPaginationItem,
+  MDBPaginationLink,
 } from "mdb-react-ui-kit";
 import ReactModal from "react-modal";
 import { Component, useState } from "react";
@@ -24,18 +27,17 @@ function Lista({ users }) {
     const tableSenha = item.senha;
     const tableEmail = item.email;
     const tableTipo = item.usuariotipo;
-    const tableId = item.id
+    const tableId = item.id;
     const tableData = {
       tableLogin: tableLogin,
       tableNome: tableNome,
       tableSenha: tableSenha,
       tableEmail: tableEmail,
       tableTipo: tableTipo,
-      tableId : tableId
+      tableId: tableId,
     };
     console.log(tableData);
     localStorage.setItem("tableUser", JSON.stringify(tableData));
-    
   }
 
   async function modifyStatus(item) {
@@ -54,6 +56,13 @@ function Lista({ users }) {
     } else {
       return "danger";
     }
+  }
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  function paginate(items, pageNumber, pageSize) {
+    const startIndex = (pageNumber - 1) * pageSize;
+    return items.slice(startIndex, startIndex + pageSize);
   }
 
   return (
@@ -100,7 +109,7 @@ function Lista({ users }) {
               </tr>
             </MDBTableHead>
             <MDBTableBody>
-              {users.map((item, i) => (
+              {paginate(users, currentPage, itemsPerPage).map((item, i) => (
                 <tr key={i}>
                   <td>
                     <div className="d-flex align-items-center">
@@ -152,6 +161,42 @@ function Lista({ users }) {
                     <td className="td4Tipo"> {item.usuariotipo} </td>
                   </tr>
               ))} */}
+          <MDBPagination className="mb-0" circle center>
+            <MDBPaginationItem disabled={currentPage === 1}>
+              <MDBPaginationLink
+                onClick={() => setCurrentPage(currentPage - 1)}
+                aria-label="Previous"
+              >
+                <span aria-hidden="true">«</span>
+              </MDBPaginationLink>
+            </MDBPaginationItem>
+
+            {Array.from({ length: Math.ceil(users.length / itemsPerPage) }).map(
+              (item, i) => (
+                <MDBPaginationItem
+                  key={i}
+                  active={i + 1 === currentPage}
+                  onClick={() => setCurrentPage(i + 1)}
+                >
+                  <MDBPaginationLink href="#">{i + 1}</MDBPaginationLink>
+                </MDBPaginationItem>
+              )
+            )}
+
+            <MDBPaginationItem
+              disabled={currentPage === Math.ceil(users.length / itemsPerPage)}
+            >
+              <MDBPaginationLink
+                onClick={() => setCurrentPage(currentPage + 1)}
+                aria-label="Next"
+              >
+                <span aria-hidden="true">»</span>
+              </MDBPaginationLink>
+            </MDBPaginationItem>
+          </MDBPagination>
+          <div style={{color: 'white'}}>
+          ㅤ
+          </div>
         </div>
       </div>
     </>

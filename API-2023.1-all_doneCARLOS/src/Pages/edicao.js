@@ -171,7 +171,7 @@ export function Edicao() {
           firstname: document.getElementById('obg2').value,
           userId : userId,
           email: document.getElementById('obg4').value,
-          date: date
+          tipo: document.getElementById('obg5').value
         }).then((response)=>{
           if (response.data.msg === ''){
             Swal.fire({
