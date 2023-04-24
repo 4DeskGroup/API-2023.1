@@ -20,7 +20,10 @@ function Dashboard() {
             //const userInativo = response.data.userInativo
             localStorage.setItem('userAtivo', userAtivo)
             //localStorage.setItem('userInativo', userInativo)
+<<<<<<< HEAD:projeto/src/Pages/Dashboard.js
             
+=======
+>>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/Dashboard.js
         })
         axios.get('http://localhost:3001/userInativo',{
 

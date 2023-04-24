@@ -114,9 +114,12 @@ function userAtivo(res) {
         //localStorage.setItem('userAtivo', statusAtivo)
         const userStatus= {userStatus:statusAtivo}
         res.send(userStatus)
+<<<<<<< HEAD:projeto/server/index.js
       }else{
         userStatus= {userStatus:0}
         res.send(userStatus)
+=======
+>>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/server/index.js
       }
     }
   );
@@ -325,7 +328,10 @@ app.post("/confirmarEditar", (req, res) => {
     res
   );
   });
+<<<<<<< HEAD:projeto/server/index.js
   
+=======
+>>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/server/index.js
 
 app.get("/userAtivo", (req, res) => {
 
