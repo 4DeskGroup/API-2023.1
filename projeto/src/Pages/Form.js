@@ -196,11 +196,7 @@ export function Form() {
 
           <div className="botoes2" onLoad='desabilitaCadastro()'>
           <div className="conteiner_termo2">
-<<<<<<< HEAD:projeto/src/Pages/Form.js
               <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Li e aceito os termos de acesso'/></div>
-=======
-              <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Li e aceito os termos de acesso'/>
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/Form.js
               {/* 
                 <div className="termosAcesso2">
                   <input type="checkbox" className="checkbox2" id="checkbox"/>
@@ -209,11 +205,7 @@ export function Form() {
                   </label>
                 </div>
                */}
-<<<<<<< HEAD:projeto/src/Pages/Form.js
                
-=======
-               </div>
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/Form.js
             <button onClick={()=>[navigate ('/')]}>voltar</button>
             <button id = 'btnCadastro' type="button" className="register--button2" 
             onClick={()=>handleClickButton()}> cadastrar </button>

@@ -152,11 +152,7 @@ export function EditarPopup() {
         </p>
         <div className="row2">
           <div className="column2">
-<<<<<<< HEAD:projeto/src/Pages/EditarPopup.js
             <label for="nome" class="input-labelp0">
-=======
-            <label for="nome" class="input-label">
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/EditarPopup.js
               Login:
             </label>
             <input
@@ -167,11 +163,7 @@ export function EditarPopup() {
               onChange={handleChangeValues}
               placeholder="Login"
             />
-<<<<<<< HEAD:projeto/src/Pages/EditarPopup.js
             <label for="nome" class="input-labelp1">
-=======
-            <label for="nome" class="input-label1">
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/EditarPopup.js
               Nome:
             </label>
             <input
@@ -191,11 +183,7 @@ export function EditarPopup() {
                 /> */}
           </div>
           <div className="column2">
-<<<<<<< HEAD:projeto/src/Pages/EditarPopup.js
             <label for="nome" class="input-labelp2">
-=======
-            <label for="nome" class="input-label2">
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/EditarPopup.js
               E-mail:
             </label>
             <input
@@ -206,11 +194,7 @@ export function EditarPopup() {
               onChange={handleChangeValues}
               placeholder="E-mail"
             />
-<<<<<<< HEAD:projeto/src/Pages/EditarPopup.js
             <label for="nome" class="input-labelp3">
-=======
-            <label for="nome" class="input-label3">
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/EditarPopup.js
               Tipo:
             </label>
             <select className="cbx"

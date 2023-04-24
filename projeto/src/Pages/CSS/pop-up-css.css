@@ -115,11 +115,7 @@ position: absolute;
 align-items: center;
 justify-content: center;
 display: flex;
-<<<<<<< HEAD:projeto/src/Pages/CSS/pop-up-css.css
 margin-top: 240px;
-=======
-margin-top: 280px;
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/CSS/pop-up-css.css
 column-gap: 60px;
 }
 
@@ -173,11 +169,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .column2 {
 display: grid;
-<<<<<<< HEAD:projeto/src/Pages/CSS/pop-up-css.css
 row-gap: 0px;  
-=======
-row-gap: 30px;  
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/CSS/pop-up-css.css
 }
 
 
@@ -186,12 +178,9 @@ row-gap: 30px;
 display: grid;
 grid-template-columns: 1fr 1.2fr;
 margin-left: -30px;
-<<<<<<< HEAD:projeto/src/Pages/CSS/pop-up-css.css
 margin-top: 25px;
 row-gap: 40px;
 
-=======
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/CSS/pop-up-css.css
 }
 
 /* .popup{
@@ -239,7 +228,6 @@ border-radius: 30px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-<<<<<<< HEAD:projeto/src/Pages/CSS/pop-up-css.css
 .input-labelp0 {
     position: absolute;
     top: 90px;
@@ -262,30 +250,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
     top: 168px;
     left: 330px;
-=======
-.input-label {
-    position: absolute;
-    top: 100px;
-    left: 130px;
-  }
-  
-  .input-label1 {
-    position: absolute;
-    top: 183px;
-    left: 130px;
-  }
-
-  .input-label2 {
-    position: absolute;
-    top: 100px;
-    left: 440px;
-  }
-
-  .input-label3 {
-    position: absolute;
-    top: 183px;
-    left: 440px;
->>>>>>> aa6dc178888ac20dd628c1784dad6c159453e4f3:API-2023.1-all_doneCARLOS/src/Pages/CSS/pop-up-css.css
   }
 
   .cbx{
