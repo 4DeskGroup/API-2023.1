@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 const cliente = new Pool({
   host: "localhost",
   user: "postgres",
-  password: "1234",
+  password: "123",
   database: "visiona",
 });
 
