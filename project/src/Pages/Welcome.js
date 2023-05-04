@@ -62,7 +62,6 @@ function Welcome() {
                                 src='images/charts.svg'
                                 className='figure-img rounded mx-n1 my-1'
                                 alt='...'
-                                onClick={()=>[navigate ('/dashboard')]} 
                             />
                         </figure>
                     </MDBBtn>
