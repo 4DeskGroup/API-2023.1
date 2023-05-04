@@ -1,0 +1,88 @@
+:root {
+    --color-primary: #FF9000;
+    --color-light: #FFFFFF;
+    --bg-primary: #FFB657;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.visiona-text-primary {
+    color: var(--color-primary);
+}
+
+.visiona-text-secondary {
+    color: pink;
+}
+
+.visiona-text-light {
+    color: var(--color-light);
+}
+
+.visiona-bg-default {
+    background-color: #F5F5F5;
+}
+
+.visiona-bg-white {
+    background-color: var(--color-light);
+}
+
+.visiona-bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.visiona-bg-light {
+    background-color: var(--color-light);
+}
+
+.visiona-box-shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.visiona-btn-light {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+}
+
+.visiona-btn-light:hover {
+    background-color: #989E9F;
+}
+
+.visiona-btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.visiona-btn-primary:hover {
+    background-color: var(--color-light);;
+    color: var(--color-primary);
+}
+
+.visiona-btn-secondary {
+    background-color: #989E9F;
+    color: var(--color-light);
+}
+
+.visiona-btn-secondary:hover {
+    background-color: var(--color-light);
+    color: #989E9F;
+}
+
+.visiona-checkbox-primary {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.visiona-checkbox-primary > label {
+    color: var(--color-primary);
+}
+
+.visiona-link-primary {
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.visiona-link-primary:hover {
+    color: #989E9F;
+}
