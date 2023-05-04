@@ -180,7 +180,7 @@ export function Edicao() {
                   onChange={handleChangeValues}
                   placeholder="E-mail"
                 />
-                <label className="label2">Data de cadastro</label>
+                <label className="label2">Tipo</label>
                 <input id="obg5"
                   type="input"
                   name="tipoUsuario"

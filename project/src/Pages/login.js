@@ -119,9 +119,10 @@ function Login() {
                 />
             </label>
 
-            {/* <a class="password" href="#">
+            <a href="/procuraEmail" >
               Esqueceu sua senha?
-            </a> */}
+            </a>
+
             <button type="button" class="btn1 btn-second1" 
             onClick={()=>[handleClickButton()]} > Login </button>
           </form>

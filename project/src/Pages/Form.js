@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './CSS/form.css'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +6,10 @@ import Swal from 'sweetalert2'
 import { MDBCheckbox } from 'mdb-react-ui-kit';
 
 export function Form() {
+
+  useEffect(()=>{
+    desabilitaCadastro()
+  })
     const [values, setValues] = useState();
     const navigate = useNavigate();
     const handleChangeValues = (value)=>{
@@ -18,6 +22,8 @@ export function Form() {
       desabilitaCadastro()
       
     };
+
+
 
     function senhasIncompativeis(){
       if(document.getElementById('obg5').value !== document.getElementById('obg6').value){

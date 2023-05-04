@@ -3,6 +3,8 @@ const app = express();
 const { Pool } = require("pg");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
+const nodemailer = require("nodemailer");
+const shortid = require("shortid");
 
 const cliente = new Pool({
   host: "localhost",
@@ -89,9 +91,7 @@ function setUsuario(
         (err, result) => {
           if (err) {
             console.log("erro SQL", err);
-          } //else{
-          //    //res.send({msg: "Usuário cadastrado com sucesso"})
-          // };
+          }
         }
       );
     }
@@ -109,9 +109,6 @@ function userAtivo(res) {
       var statusAtivo
       if (result.rows.length > 0) {
         statusAtivo = result.rows.length
-        //console.log(statusAtivo+ 'ativo')
-        //const data = {ativo: statusAtivo}
-        //localStorage.setItem('userAtivo', statusAtivo)
         const userStatus= {userStatus:statusAtivo}
         res.send(userStatus)
       }else{
@@ -166,28 +163,6 @@ function populaUser(userId, res) {
   );
 }
 
-
-// function atualizaUser(
-//   login,
-//   nome,
-//   email,
-//   datacadastro,
-//   userId,
-//   res
-// ) {
-//         cliente.query(
-//           "UPDATE usuarios SET login = ?, nome = ?, email = ?, datacadastro = ? WHERE id = ?",
-//           [login, nome, email, datacadastro, userId],
-//         (err, result) => {
-//           if (err) {
-//             console.log("erro SQL", err);
-//           } else{
-//              res.send({msg: "Usuário cadastrado com sucesso"})
-//            };
-//         }
-//       );
-//   }
-
 function atualizaUser(login, nome, email, datacadastro, userId, tipo, res) {
   cliente.query(
     "UPDATE usuarios SET login = '" + login + "', nome = '" + nome + "', email = '" + email +  "', usuariotipo = '" + tipo + "', datacadastro = '" + datacadastro + "' WHERE id = " + userId + ";",
@@ -201,11 +176,49 @@ function atualizaUser(login, nome, email, datacadastro, userId, tipo, res) {
   );
 }
 
+function recuperaEmail(login, res){
+  cliente.query("SELECT * FROM usuarios WHERE login = '" + login + "';", (err, result)=>{
+    if(err){
+      console.log("erro SQL RecuperaEmail:  ", err);
+    }
+    else{
+      const emailUser = result.rows.values().next().value.email;
+      const data = {emailUser: emailUser, msg:'Email pego com sucesso.'}
+      res.send(data)
+    }
+  })
+}
+
+function alteraSenha(email,senha, res) {
+  bcrypt.hash(senha, 10, (err, hash) => {
+    if (err) {
+      res.send(err);
+    } else {
+      cliente.query(
+    "UPDATE usuarios SET senha = '" + hash + "' WHERE email = '" + email + "';",
+    (err, result) => {
+      if (err) {
+        console.log("erro SQL", err);
+        res.send({msg: "ERRO NA ALTERAÇÃO DA SENHA."})
+      } else{
+         res.send({msg: "Senha alterada com sucesso."})
+       };
+    }
+    );
+  }
+});
+}
 
 
 
 app.use(cors());
 app.use(express.json());
+
+app.post("/procuraEmail", (req, res)=>{
+  const { login } = req.body;
+
+  recuperaEmail(login, res);
+})
 
 app.post("/login", (req, res) => {
   const login = req.body.login;
@@ -335,6 +348,41 @@ app.get("/userInativo", (req, res) => {
 
   userInativo(res)
 });
+
+
+app.post('/enviar-token', (req, res) => {
+  const { email } = req.body
+
+  shortid.characters('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#') // Define os caracters que vão estar no token
+  const token = shortid.generate().substring(0,6); // Gera o token
+
+  const transporter = nodemailer.createTransport({ // Configuração SMTP
+      host: "smtp-mail.outlook.com",
+      port: 587,
+      secure: false,
+      auth: {
+          user: "fateccarlos@gmail.com",
+          pass: "24g11r84"
+      }
+  });
+
+  transporter.sendMail({ // Envia o Email
+      from: 'fateccarlos@gmail.com',
+      to: email, // Email destinatário
+      subject: 'Visiona - token para alteração de senha',
+      html: `Requisição de token para alteração de senha no sistema da Visiona.</br> Seu token é: <b>${token}</b>`
+  })
+
+  res.send({msg: "Sucesso", token: token})
+});
+
+app.post('/alterarSenha', (req, res)=>{
+  const email = req.body.email;
+  const password = req.body.password;
+
+  alteraSenha(email, password, res)
+});
+
 
 
 app.listen(3001, () => {
