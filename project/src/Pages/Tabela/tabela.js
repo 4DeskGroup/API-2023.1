@@ -161,7 +161,7 @@ function Lista({ users }) {
                     <td className="td4Tipo"> {item.usuariotipo} </td>
                   </tr>
               ))} */}
-          <MDBPagination className="mb-0" circle center>
+          <MDBPagination className="pagination" circle center>
             <MDBPaginationItem disabled={currentPage === 1}>
               <MDBPaginationLink
                 onClick={() => setCurrentPage(currentPage - 1)}

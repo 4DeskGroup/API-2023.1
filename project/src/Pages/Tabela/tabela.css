@@ -145,3 +145,9 @@ justify-content: center;
 h1, .h1 {
 font-size: 30px;
 }
+
+.pagination {
+  position: relative;
+  z-index: 0;
+  /* restante do estilo */
+}
