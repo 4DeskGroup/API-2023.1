@@ -16,7 +16,8 @@ import { Component, useState } from "react";
 
 function Lista({ users }) {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [searchValue, setSearchValue] = useState(''); // search bar
+  const filteredUsers = users.filter((item) => typeof item.login === 'string' && item.login.toLowerCase().includes(searchValue.toLowerCase()));
   function toggleModal() {
     setIsOpen(!isOpen);
   }
@@ -87,7 +88,12 @@ function Lista({ users }) {
               <EditarPopup />
             </ReactModal>
           </div>
-
+          <input
+  type="text"
+  placeholder="Pesquisar usuário"
+  value={searchValue}
+  onChange={(e) => setSearchValue(e.target.value)}
+/>
           <MDBTable align="middle">
             <MDBTableHead>
               <tr>
@@ -109,7 +115,7 @@ function Lista({ users }) {
               </tr>
             </MDBTableHead>
             <MDBTableBody>
-              {paginate(users, currentPage, itemsPerPage).map((item, i) => (
+            {paginate(filteredUsers, currentPage, itemsPerPage).map((item, i) => (
                 <tr key={i}>
                   <td>
                     <div className="d-flex align-items-center">
