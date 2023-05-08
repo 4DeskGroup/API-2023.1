@@ -361,8 +361,8 @@ app.post('/enviar-token', (req, res) => {
       port: 587,
       secure: false,
       auth: {
-          user: "fateccarlos@gmail.com",
-          pass: "24g11r84"
+          user: "",
+          pass: ""
       }
   });
 
