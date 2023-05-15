@@ -1,0 +1,150 @@
+.cabecalho3 {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.container_linha3 {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.form3 {
+margin-top: 53px;
+align-items: center;
+justify-content: center;
+display: flex;
+font-family: 'Poppins';
+background-color: rgb(230, 230, 230);
+}
+
+.sub_titulo3 {
+    font-size: 25px;
+margin-bottom: 390px;
+margin-left: -20px;
+margin-top: 100px;
+position: absolute;
+color: orange;
+font-weight: bold;
+
+}
+.sub_titulo4 {
+    margin-bottom: 340px;
+    margin-left: -20px;
+    margin-top: 120px;
+    position: absolute;
+    color: orange;    
+}
+.sub_titulo5 {
+    margin-bottom: 200px;
+    margin-left: -255px;
+    margin-top: 150px;
+    position: absolute;
+    color: rgb(147, 147, 147);
+    font-weight: 400; 
+}
+
+
+.column3 input  {
+border-radius: 30px;
+width: 450px;
+height: 50px;
+background: none;
+border: orange;
+border-style: solid;
+border-width: 1.5px;
+padding-left:30px;
+padding-right: 30px;
+color: rgb(122, 122, 119);
+margin-left: 100px;
+
+font-family: 'Poppins';
+}
+
+.column3 input:hover{
+background: none;
+border: rgb(169, 169, 169);
+border-style: solid;
+border-width: 1.5px;
+}
+
+.column3 input:focus-visible {
+outline:0;
+border-radius: 10;
+border-color: rgb(136, 136, 240);
+
+}
+
+.container-form3{
+margin-top: 60px;
+margin-bottom: 60px;
+background-color: white;
+height: 450px;
+width: 750px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.column3 {
+display: grid;
+row-gap: 30px;  
+}
+
+.row3 {
+display: grid;
+grid-template-columns: 1fr 1.2fr;
+margin-left: 50px;
+margin-top: 40px;
+}
+
+.botoes3{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 250px;
+    column-gap: 60px;
+}
+    
+.botoes3 button {
+    border-radius: 25px;
+    height: 45px;
+    width: 200px;
+    background-color: rgb(147, 147, 147);
+    border-style: solid;
+    border: 1px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins';
+    }
+    
+.botoes3 button:last-child {
+    background-color: orange;
+    border-style: solid;
+    border: 1px;
+    color: white;
+    cursor: pointer;
+    }
+    
+.botoes3-disabled button  {
+    background-color: rgb(0, 0, 0);
+    border-style: solid;
+    border: 1px;
+    color: white;
+    cursor: pointer;
+}
+    
+.botoes3 button:hover {
+    background-color: rgb(253, 119, 70);
+}
+    
+.botoes3 button:first-child:hover {
+    background-color: rgb(206, 206, 206);
+}
+
