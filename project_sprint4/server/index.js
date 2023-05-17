@@ -7,10 +7,12 @@ const nodemailer = require("nodemailer");
 const shortid = require("shortid");
 
 const cliente = new Pool({
-  host: "localhost",
-  user: "postgres",
-  password: "1234",
-  database: "visiona",
+  // host: "localhost",
+  // user: "postgres",
+  // password: "1234",
+  // database: "visiona",
+  connectionString: process.env.POSTGRES_URL + "?sslmode=require", 
+
 });
 
 function buscaUsuario(login, senha, res) {
@@ -388,6 +390,7 @@ app.post("/alterarSenha", (req, res) => {
   alteraSenha(email, password, res);
 });
 
-app.listen(3001, () => {
+const port = process.env.PORT || 3001
+app.listen(port, () => {
   console.log("rodando servidor");
 });
