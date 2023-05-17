@@ -7,11 +7,11 @@ const nodemailer = require("nodemailer");
 const shortid = require("shortid");
 
 const cliente = new Pool({
-  // host: "localhost",
-  // user: "postgres",
-  // password: "1234",
-  // database: "visiona",
-  connectionString: process.env.POSTGRES_URL + "?sslmode=require", 
+  host: "localhost",
+  user: "postgres",
+  password: "1234",
+  database: "visiona",
+  // connectionString: process.env.POSTGRES_URL + "?sslmode=require", 
 
 });
 
