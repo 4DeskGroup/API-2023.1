@@ -1,0 +1,192 @@
+
+.cabecalho2Editar {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #FF9000;
+    position: absolute;
+    left: 160px;
+    top: 80px;
+   }
+   .title-hrEditar {
+    margin-top: 100px;
+    border:0px solid #FF9000;
+    width: 600px;
+    margin-left: 15px;
+   }
+
+    .container_linha2Editar {
+    display: flex;
+    align-items: center;
+      }
+
+.cad_titulo2Editar {
+font-size: 35px;
+position: relative;
+margin-left: -70%;
+margin-top: 20px;
+color: orange;
+
+}
+
+
+
+.form2 {
+margin-top: 100px;
+align-items: center;
+justify-content: center;
+display: flex;
+font-family: 'Poppins';
+background-color: rgb(230, 230, 230);
+}
+
+
+.sub_titulo2Editar {
+margin-bottom: 380px;
+margin-left: -200px;
+margin-top: 100px;
+position: absolute;
+color: orange;
+
+}
+
+
+.column2 input  {
+border-radius: 30px;
+width: 230px;
+height: 50px;
+background: none;
+border: orange;
+border-style: solid;
+border-width: 1.5px;
+padding-left:30px;
+padding-right: 30px;
+color: rgb(122, 122, 119);
+margin-left: 75px;
+margin-top: -10px;
+font-family: 'Poppins';
+}
+
+.column2 input:hover{
+background: none;
+border: rgb(169, 169, 169);
+border-style: solid;
+border-width: 1.5px;
+}
+
+.column2 input:focus-visible {
+outline:0;
+border-radius: 10;
+border-color: rgb(136, 136, 240);
+
+}
+
+.column2 label {
+font-size: small;
+color: rgb(253, 160, 0);
+margin-bottom: -20px;
+margin-left: 100px;
+}
+
+.conteiner_termo2 {
+align-items: center;
+display: flex;
+}
+
+.termosAcesso2 {
+margin-top: -20px;
+display: inline;
+margin-bottom: 50px;
+
+}
+
+.checkbox2 {
+position: absolute;
+margin-left: 300px;
+margin-top: 25px;
+width: 13px;
+color: #FF6B00;    
+}
+
+.acesso_txt2 {
+position: absolute;
+margin-left: 330px;
+margin-top: 40px;
+font-family: 'Poppins';
+font-size: 12px;
+color: orange;
+}
+
+.botoes2Editar{
+
+position: absolute;
+align-items: center;
+justify-content: center;
+display: flex;
+margin-top: 250px;
+column-gap: 60px;
+}
+
+.botoes2Editar button {
+border-radius: 25px;
+height: 45px;
+width: 200px;
+background-color: rgb(147, 147, 147);
+border-style: solid;
+border: 1px;
+color: white;
+cursor: pointer;
+font-family: 'Poppins';
+}
+
+.botoes2Editar button:last-child {
+background-color: orange;
+border-style: solid;
+border: 1px;
+color: white;
+cursor: pointer;
+}
+
+.botoes2Editar-disabled button  {
+background-color: rgb(0, 0, 0);
+border-style: solid;
+border: 1px;
+color: white;
+cursor: pointer;
+}
+
+.botoes2Editar button:hover {
+background-color: rgb(253, 119, 70);
+}
+
+.botoes2Editar button:first-child:hover {
+background-color: rgb(206, 206, 206);
+}
+
+.container2 {
+  margin-top: 30px;
+background-color: white;
+height: 400px;
+width: 750px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30px;
+margin-bottom: 60px;
+}
+
+
+.column2 {
+display: grid;
+row-gap: 30px;  
+margin-top: -40px;
+}
+
+
+
+.row2 {
+display: grid;
+grid-template-columns: 1fr 1.2fr;
+margin-left: -30px;
+}
+

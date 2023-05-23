@@ -1,0 +1,294 @@
+
+.cabecalho11 {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.container_linha11 {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.cad_titulo11 {
+font-size: 35px;
+position: relative;
+margin-left: -70%;
+margin-top: 20px;
+color: orange;
+
+
+}
+
+
+.form2 {
+margin-top: 53px;
+align-items: center;
+justify-content: center;
+display: flex;
+font-family: 'Poppins';
+background-color: rgb(230, 230, 230);
+}
+
+
+.sub_titulo-edit {
+margin-bottom: 430px;
+margin-left: 0px;
+margin-top: 140px;
+position: absolute;
+color: orange;
+
+}
+
+
+.column2 input  {
+border-radius: 30px;
+width: 230px;
+height: 50px;
+background: none;
+border: orange;
+border-style: solid;
+border-width: 1.5px;
+padding-left:30px;
+padding-right: 30px;
+color: rgb(122, 122, 119);
+margin-left: 75px;
+font-family: 'Poppins';
+}
+
+.column2 input:hover{
+background: none;
+border: rgb(169, 169, 169);
+border-style: solid;
+border-width: 1.5px;
+}
+
+.column2 input:focus-visible {
+outline:0;
+border-radius: 10;
+border-color: rgb(136, 136, 240);
+
+}
+
+.column2 label {
+font-size: small;
+color: rgb(253, 160, 0);
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: -10px;
+}
+
+.conteiner_termo2 {
+align-items: center;
+display: flex;
+}
+
+.termosAcesso2 {
+margin-top: -20px;
+display: inline;
+margin-bottom: 50px;
+
+}
+
+.checkbox2 {
+position: absolute;
+margin-left: 300px;
+margin-top: 25px;
+width: 13px;
+color: #FF6B00;    
+}
+
+.acesso_txt2 {
+position: absolute;
+margin-left: 330px;
+margin-top: 40px;
+font-family: 'Poppins';
+font-size: 12px;
+color: orange;
+}
+
+.botoes2-edit{
+
+position: absolute;
+align-items: center;
+justify-content: center;
+display: flex;
+margin-top: 240px;
+column-gap: 60px;
+}
+
+.botoes2-edit button {
+border-radius: 25px;
+height: 45px;
+width: 200px;
+background-color: rgb(147, 147, 147);
+border-style: solid;
+border: 1px;
+color: white;
+cursor: pointer;
+font-family: 'Poppins';
+}
+
+.botoes2-edit button:last-child {
+background-color: orange;
+border-style: solid;
+border: 1px;
+color: white;
+cursor: pointer;
+}
+
+.botoes2-edit-disabled button  {
+background-color: rgb(0, 0, 0);
+border-style: solid;
+border: 1px;
+color: white;
+cursor: pointer;
+}
+
+.botoes2-edit button:hover {
+background-color: rgb(253, 119, 70);
+}
+
+.botoes2-edit button:first-child:hover {
+background-color: rgb(206, 206, 206);
+}
+
+.container2 {
+background-color: white;
+height: 470px;
+width: 750px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.column2 {
+display: grid;
+row-gap: 0px;  
+}
+
+
+
+.row2 {
+display: grid;
+grid-template-columns: 1fr 1.2fr;
+margin-left: -30px;
+margin-top: 25px;
+row-gap: 40px;
+
+}
+
+/* .popup{
+height: 300px;
+width: 300px;
+align-items: center;
+}
+ReactModal{
+height: 300px;
+width: 300px;
+align-items: center;
+position: absolute;
+justify-content: center;
+display: flex;
+}
+.popupdiv{
+height: 300px;
+width: 300px;
+align-items: center;
+position: absolute;
+justify-content: center;
+display: flex;
+} */
+
+.form-pop-up{
+background-color: rgb(198, 196, 196);
+align-items: center;
+position: absolute;
+justify-content: center;
+display: flex;
+border-radius: 30px;
+margin-left: 23%;
+margin-top: 10%;
+}
+
+.container-pop {
+background-color: white;
+
+height: 400px;
+width: 750px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-labelp0 {
+    position: absolute;
+    top: 120px;
+    left: 30px;
+  }
+  
+  .input-labelp1 {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+  }
+
+  .input-labelp2 {
+    position: absolute;
+    top: 120px;
+    left: 330px;
+  }
+
+  .input-labelp3 {
+    position: absolute;
+    top: 200px;
+    left: 330px;
+  }
+
+  .cbx{
+    border-radius: 30px;
+    width: 230px;
+    height: 50px;
+    background: none;
+    border: orange;
+    border-style: solid;
+    border-width: 1.5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgb(122, 122, 119);
+    margin-left: 75px;
+    font-family: 'Poppins';
+    background-position: 10px center; 
+  }
+
+  select  {
+    padding-right: 30px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+  }
+
+  .cbx select {
+    text-indent: 5px;
+    padding-right: 25px;
+    padding-right: 30px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+  }
+
+option {
+    border-radius: 50px;
+    color: #FF6B00;
+}
+
+option:hover{
+  background-color: #a9a9a9;
+}

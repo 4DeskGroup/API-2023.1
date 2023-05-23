@@ -1,0 +1,149 @@
+.cabecalho-login-senha {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.container_linha4-login-senha {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.form4-login-senha {
+margin-top: 53px;
+align-items: center;
+justify-content: center;
+display: flex;
+font-family: 'Poppins';
+background-color: rgb(230, 230, 230);
+}
+
+.sub_titulo4-login-senha {
+    font-size: 25px;
+margin-bottom: 390px;
+margin-left: -20px;
+margin-top: 100px;
+position: absolute;
+color: orange;
+font-weight: bold;
+
+}
+.sub_titulo5-login-senha {
+    margin-bottom: 340px;
+    margin-left: -20px;
+    margin-top: 120px;
+    position: absolute;
+    color: orange;    
+}
+.sub_titulo6-login-senha {
+    margin-bottom: 200px;
+    margin-left: -300px;
+    margin-top: 150px;
+    position: absolute;
+    color: rgb(147, 147, 147);
+    font-weight: 400; 
+}
+
+
+.column4-login-senha input  {
+border-radius: 30px;
+width: 450px;
+height: 50px;
+background: none;
+border: orange;
+border-style: solid;
+border-width: 1.5px;
+padding-left:30px;
+padding-right: 30px;
+color: rgb(122, 122, 119);
+margin-left: 100px;
+
+font-family: 'Poppins';
+}
+
+.column4-login-senha input:hover{
+background: none;
+border: rgb(169, 169, 169);
+border-style: solid;
+border-width: 1.5px;
+}
+
+.column4-login-senha input:focus-visible {
+outline:0;
+border-radius: 10;
+border-color: rgb(136, 136, 240);
+
+}
+
+.container-form4-login-senha{
+margin-top: 60px;
+margin-bottom: 60px;
+background-color: white;
+height: 450px;
+width: 750px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.column4-login-senha {
+display: grid;
+row-gap: 30px;  
+}
+
+.row4-login-senha {
+display: grid;
+grid-template-columns: 1fr 1.2fr;
+margin-left: 50px;
+margin-top: 40px;
+}
+
+.botoes4-login-senha{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 250px;
+    column-gap: 60px;
+}
+    
+.botoes4-login-senha button {
+    border-radius: 25px;
+    height: 45px;
+    width: 200px;
+    background-color: rgb(147, 147, 147);
+    border-style: solid;
+    border: 1px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins';
+    }
+    
+.botoes4-login-senha button:last-child {
+    background-color: orange;
+    border-style: solid;
+    border: 1px;
+    color: white;
+    cursor: pointer;
+    }
+    
+.botoes4-disabled-login-senha button  {
+    background-color: rgb(0, 0, 0);
+    border-style: solid;
+    border: 1px;
+    color: white;
+    cursor: pointer;
+}
+    
+.botoes4-login-senha button:hover {
+    background-color: rgb(253, 119, 70);
+}
+    
+.botoes4-login-senha button:first-child:hover {
+    background-color: rgb(206, 206, 206);
+}
