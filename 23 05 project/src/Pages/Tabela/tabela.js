@@ -12,7 +12,7 @@ import {
   MDBPaginationLink,
 } from "mdb-react-ui-kit";
 import ReactModal from "react-modal";
-import { Component, useState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 
 function Lista({ users }) {
@@ -215,7 +215,7 @@ function Lista({ users }) {
                           editUsers(item);
                         }}
                       >
-                        Editar
+                        ✏️
                       </MDBBtn>
                       <MDBBtn
                         color="link"
@@ -281,3 +281,42 @@ function Lista({ users }) {
 }
 
 export default Lista;
+
+
+/*// BOTÃO SWITCH
+
+// const [switchValue, setSwitchValue] = useState(false);
+  // useEffect(() => {
+  //   const storedSwitchValue = localStorage.getItem('switchValue');
+  //   if (storedSwitchValue) {
+  //     setSwitchValue(JSON.parse(storedSwitchValue));
+  //   }}, []);
+
+  
+  //MODIFYSTATUS
+  // const newSwitchValue = !switchValue;
+  // setSwitchValue(newSwitchValue);
+
+  // // Armazenar o valor do switch em localStorage
+  // localStorage.setItem('switchValue', JSON.stringify(newSwitchValue));
+  // // botão ativo e desativo
+  // setSwitchValue(!switchValue);
+
+
+  // BOTÃO SWITCH
+   // <MDBSwitch
+   //   id="flexSwitchCheckDefault"
+  //   checked={switchValue}
+  //   onChange={() => setSwitchValue(!switchValue)}
+  //   onClick={() => modifyStatus(item)}
+  // />
+  // <MDBBtn
+  //   color="link"
+  //   rounded
+  //   size="sm"
+  //   onClick={(event) => {
+  //     event.stopPropagation(); // Evita a propagação do evento
+  //     modifyStatus(item)
+  //   }}
+  // >
+// </MDBBtn>*/

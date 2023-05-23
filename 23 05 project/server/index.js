@@ -9,7 +9,7 @@ const shortid = require("shortid");
 const cliente = new Pool({
   host: "localhost",
   user: "postgres",
-  password: "1234",
+  password: "123",
   database: "visiona",
 });
 
