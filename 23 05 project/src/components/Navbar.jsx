@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
 
 import {
     MDBContainer,
@@ -51,6 +50,10 @@ export default function Navbar() {
 
                             <MDBNavbarItem className='mx-4'>
                                 <MDBNavbarLink href='#' style={{color: '#FF6B00'}}>usuários</MDBNavbarLink>
+                            </MDBNavbarItem>
+
+                            <MDBNavbarItem className='mx-4'>
+                                <MDBNavbarLink href='#' style={{color: '#FF6B00'}}>cadastro usuário</MDBNavbarLink>
                             </MDBNavbarItem>
                         </MDBNavbarNav>
 

@@ -17,6 +17,7 @@ class Navbar extends Component {
     if(tipoUser !== 'ADM'){
       document.getElementById('btnTabela').style.display = 'none'
       document.getElementById('btnDashboard').style.display = 'none'
+      document.getElementById('btnCadastro').style.display = 'none'
     }else{
       document.getElementById('btnEditar').style.display = 'none'
     }
@@ -27,10 +28,10 @@ class Navbar extends Component {
     return (
       <>
         <nav>
-
           <a href="welcome">
             <img src={logo} className="logo_visiona" alt="logo"></img>
           </a>
+
           <div>
             <ul id="navbar">
               <li>
@@ -43,7 +44,10 @@ class Navbar extends Component {
                 <NavLink id='btnTabela' className="link_nav" to="/tabela">usuários</NavLink>
               </li>
               <li>
-                <NavLink id='btnEditar' className="link_nav" to="/edicao">editar</NavLink>
+                <NavLink id='btnCadastrar' className="link_nav" to="/cadastroadmininastro">cadastrar usuário</NavLink>
+              </li>
+              <li>
+                <NavLink id='btnEditar' className="link_nav" to="/editar">editar</NavLink>
               </li>
             </ul>
           </div>

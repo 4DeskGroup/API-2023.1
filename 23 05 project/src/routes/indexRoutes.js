@@ -5,14 +5,15 @@ import Welcome from "../Pages/Welcome";
 import Table from "../Pages/Tabela/Table";
 import Dashboard from "../Pages/Dashboard";
 import { Edicao } from "../Pages/edicao";
-import { ProcuraLogin } from "../Pages/procuraEmail";
-import EnviaEmail from "../Pages/enviaEmail";
-import { ValidaToken } from "../Pages/validaToken";
 import { AlterarSenha } from "../Pages/AlterarSenha";
 import { RotaPrivada, RotaPrivadaAdm, RotaPrivadaToken } from "./validacao";
 import { EnviarLogin } from "../Pages/enviar_login";
 import { Token } from "../Pages/token";
 import FAQ from "../Pages/FAQ";
+import CadastroAdmininastro from "../Pages/CadastroAdmininastro.js"
+
+
+
 export const Rotas = () => {
   return (
     //Rotas da aplicação
@@ -50,7 +51,16 @@ export const Rotas = () => {
         />
 
         <Route
-          path="/edicao"
+          path="/cadastroadmininastro"
+          element={
+            <RotaPrivada>
+              <CadastroAdmininastro />
+            </RotaPrivada>
+          }
+        />
+
+        <Route
+          path="/editar"
           element={
             <RotaPrivada>
               <Edicao />
@@ -59,8 +69,6 @@ export const Rotas = () => {
         />
 
         <Route path="/procuraEmail" element={<EnviarLogin />} />
-
-        {/* <Route path="/enviaEmail" element={<EnviaEmail />} /> */}
 
         <Route
           path="/validaToken"

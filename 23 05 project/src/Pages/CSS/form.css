@@ -192,28 +192,6 @@ grid-template-columns: 1fr 1.2fr;
 margin-left: -30px;
 }
 
-/* .popup{
-height: 300px;
-width: 300px;
-align-items: center;
-}
-ReactModal{
-height: 300px;
-width: 300px;
-align-items: center;
-position: absolute;
-justify-content: center;
-display: flex;
-}
-.popupdiv{
-height: 300px;
-width: 300px;
-align-items: center;
-position: absolute;
-justify-content: center;
-display: flex;
-} */
-
 .form-pop-up{
 background-color: rgb(198, 196, 196);
 align-items: center;

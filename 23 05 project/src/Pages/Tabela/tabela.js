@@ -232,14 +232,6 @@ function Lista({ users }) {
             </MDBTableBody>
           </MDBTable>
 
-          {/* {users.map((item, i )=>(
-                  <tr key = {i} className="tr4">
-                    <td className="td4Login"> {item.login} </td>
-                    <td className="td4Data"> {item.datacadastro} </td>
-                    <td className="td4Status"> {item.status} </td>
-                    <td className="td4Tipo"> {item.usuariotipo} </td>
-                  </tr>
-              ))} */}
           <MDBPagination className="pagination" circle center>
             <MDBPaginationItem disabled={currentPage === 1}>
               <MDBPaginationLink
