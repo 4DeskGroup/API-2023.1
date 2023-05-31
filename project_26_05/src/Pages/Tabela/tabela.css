@@ -20,7 +20,7 @@ align-items: center;
 justify-content: center;
 width: 1000px;
 border-left: 500px;
-top: 200px;
+top: 180px;
 background: #F9F9F9;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
@@ -84,21 +84,22 @@ font-family: 'Poppins';
       text-transform: capitalize;
       color: #FF9000;
       position: absolute;
-      left: 270px;
+      left: 120px;
       top: 120px;
       font-family: 'Poppins';
 } 
 
 .title-container3 {
-  display: flex;
-  align-items: center;
   font-family: 'Poppins';
+  margin-left: 20px;
 }
 
 .title-hr3 {
   border: 1px solid #FF9000;
-  width: 650px;
-  margin-left: 15px;
+  width: 600px;
+  position: absolute;
+  top: 5px;
+  margin-left: 350px;
   font-family: 'Poppins';
 }
 .tr4 {
@@ -172,7 +173,7 @@ font-size: 30px;
 
 .cbx-filtro{
     border-radius: 30px;
-    width: 150px;
+    width: 290px;
     height: 35px;
     background: none;
     border: orange;

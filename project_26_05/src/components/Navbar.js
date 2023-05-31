@@ -17,7 +17,7 @@ class Navbar extends Component {
     if(tipoUser !== 'ADM'){
       document.getElementById('btnTabela').style.display = 'none'
       document.getElementById('btnDashboard').style.display = 'none'
-      document.getElementById('btnCadastro').style.display = 'none'
+      document.getElementById('btnCadastrar').style.display = 'none'
     }else{
       document.getElementById('btnEditar').style.display = 'none'
     }

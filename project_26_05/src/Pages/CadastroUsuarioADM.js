@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./CSS/pop-up-css.css";
+import "./CSS/cadastro-user-adm.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { MDBCheckbox } from "mdb-react-ui-kit";
 import Navbar from "../components/Navbar";
 import BottomNavbar from "../components/BottomNavbar";
 
@@ -112,19 +111,20 @@ export function CadastroUsuarioADM() {
   return (
     <>
       <Navbar />
-      <div className="form-body" >
-        <div className="container3">
-          <div className="titulo3">
-          <div className='col col-sm-12 col-md-10 align-items-center justify-content-center'>
-            <div className="title-container3">
+      <div className="form-body4" >
+      
+      <div className="fundo-4">
+        <div className="container4">
+          <div className="titulo4">
+            <div className="title-container4">
               <h2>Cadastrar novo usuário</h2>
-              <hr className="title-hr3" />
-            </div>
+              <hr className="title-hr4" />
+            </div> 
           </div>
-          </div>
+         
 
 
-          <div className="container-form h-60 mt-1">
+          <div className="container-form-4">
             <div className="sub_titulo2">
               <h6>Preencha os campos abaixo com os dados:</h6>
             </div>
@@ -189,15 +189,7 @@ export function CadastroUsuarioADM() {
             </div>
 
 
-            <div className="botoes2" onLoad="desabilitaCadastro()">
-              <div className="conteiner_termo2">
-                <MDBCheckbox
-                  name="flexCheck"
-                  value=""
-                  id="flexCheckDefault"
-                  label="Li e aceito os termos de acesso"
-                />
-              </div>
+            <div className="botoes4-adm" onLoad="desabilitaCadastro()">
 
               <button onClick={() => [navigate("/")]}>voltar</button>
 
@@ -213,6 +205,7 @@ export function CadastroUsuarioADM() {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <BottomNavbar />
     </>

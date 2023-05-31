@@ -447,21 +447,21 @@ app.post("/validaEmail", async (req, res) => {
       "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@#"
     ); // Define os caracters que vão estar no token
     const token = shortid.generate().substring(0, 6); // Gera o token
-
+    
     const transporter = nodemailer.createTransport({
       // Configuração SMTP
       host: "smtp-mail.outlook.com",
       port: 587,
       secure: false,
       auth: {
-        user: "fateccarlos@gmail.com",
-        pass: "24g11r84",
+        user: 'group4desk@outlook.com',
+        pass: '4deskparadesk',
       },
     });
 
     transporter.sendMail({
       // Envia o Email
-      from: "fateccarlos@gmail.com",
+      from: "group4desk@outlook.com",
       to: email, // Email destinatário
       subject: "Visiona - token para validação de e-mail",
       html: `<h3>Token para validação de e-mail no sistema da Visiona.</h3></br> <h4>Seu token é: <b>${token}</b></h4>`,

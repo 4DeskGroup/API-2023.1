@@ -1,0 +1,105 @@
+.titulo4 {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #FF9000;
+  position: absolute;
+  left: 250px;
+  top: 120px;
+  font-family: 'Poppins';
+}
+
+.container4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+  background: #F5F5F5;
+  font-family: 'Poppins';
+  font-size: smaller;
+  margin-top: -230px;
+}
+
+.title-container4 {
+  align-items: center;
+  font-family: 'Poppins';
+  margin-left: 32px;
+}
+
+.title-hr4 {
+  border: 1px solid #FF9000;
+  width: 320px;
+  margin-left: 370px;
+  font-family: 'Poppins';
+  margin-top: -20px;
+}
+
+.form-body4 {
+  margin-top: 230px;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Poppins';
+  background-color: rgb(230, 230, 230);
+}
+
+.container-form-4 {
+  margin-top: 55px;
+  margin-bottom: 60px;
+  background-color: white;
+  height: 400px;
+  width: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.botoes4-adm{
+
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 280px;
+  column-gap: 60px;
+  }
+  
+  .botoes4-adm button {
+  border-radius: 25px;
+  height: 45px;
+  width: 200px;
+  background-color: rgb(147, 147, 147);
+  border-style: solid;
+  border: 1px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Poppins';
+  }
+  
+  .botoes4-adm button:last-child {
+  background-color: orange;
+  border-style: solid;
+  border: 1px;
+  color: white;
+  cursor: pointer;
+  }
+  
+  .botoes4-adm-disabled button  {
+  background-color: rgb(0, 0, 0);
+  border-style: solid;
+  border: 1px;
+  color: white;
+  cursor: pointer;
+  }
+  
+  .botoes4-adm button:hover {
+  background-color: rgb(253, 119, 70);
+  }
+  
+  .botoes4-adm button:first-child:hover {
+  background-color: rgb(206, 206, 206);
+  }
+  

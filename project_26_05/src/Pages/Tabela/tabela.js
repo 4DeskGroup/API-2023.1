@@ -17,78 +17,125 @@ import { useEffect } from "react";
 import Swal from "sweetalert2";
 
 function Lista({ users }) {
-  // paginação
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  // // paginação
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const itemsPerPage = 10;
 
+  // function paginate(items, pageNumber, pageSize) {
+  //   const startIndex = (pageNumber - 1) * pageSize;
+  //   return items.slice(startIndex, startIndex + pageSize);
+  // }
+  // // pop-up
+  // const [isOpen, setIsOpen] = useState(false);
+
+  // // pesquisa e filtro
+  // // opção selecionada na cbx
+  // const [selectedOption, setSelectedOption] = useState();
+  // var filtroSelecionado = selectedOption;
+
+  // // set opção selecionada na cbx
+  // const handleChangeOption = (event) => {
+  //   setSelectedOption(event.target.value);
+  //   setCurrentPage(1);
+  // };
+
+  // // pega o valor pesquisado no input
+  // const [searchValue, setSearchValue] = useState("");
+
+  // // filtra a pesquisa de acordo com a opção selecionada na combobox
+  // var filteredUsers;
+  // switch (filtroSelecionado) {
+  //   case "email":
+  //     filteredUsers = users.filter((item) =>
+  //       item.email.toLowerCase().includes(searchValue.toLowerCase())
+  //     );
+  //     break;
+  //   case "status":
+  //     filteredUsers = users.filter(
+  //       (item) =>
+  //         typeof item.status === "string" &&
+  //         item.status.toLowerCase().startsWith(searchValue.toLowerCase())
+  //     );
+  //     break;
+  //   case "data":
+  //     filteredUsers = users.filter(
+  //       (item) =>
+  //         typeof item.datacadastro === "string" &&
+  //         item.datacadastro.toLowerCase().includes(searchValue.toLowerCase())
+  //     );
+  //     break;
+  //   case "tipo":
+  //     filteredUsers = users.filter(
+  //       (item) =>
+  //         typeof item.usuariotipo === "string" &&
+  //         item.usuariotipo.toLowerCase().startsWith(searchValue.toLowerCase())
+  //     );
+  //     break;
+  //   default:
+  //     filteredUsers = users.filter(
+  //       (item) =>
+  //         typeof item.login === "string" &&
+  //         item.login.toLowerCase().includes(searchValue.toLowerCase())
+  //     );
+  //     break;
+  // }
+  // // atualiza p/ primeira pag ao pesquisar
+  // useEffect(() => {
+  //   setCurrentPage(1);
+  // }, [searchValue, filtroSelecionado]);
+
+  // function toggleModal() {
+  //   setIsOpen(!isOpen);
+  // }
+
+  // async function editUsers(item) {
+  //   const tableLogin = item.login;
+  //   const tableNome = item.nome;
+  //   const tableSenha = item.senha;
+  //   const tableEmail = item.email;
+  //   const tableTipo = item.usuariotipo;
+  //   const tableId = item.id;
+  //   const tableData = {
+  //     tableLogin: tableLogin,
+  //     tableNome: tableNome,
+  //     tableSenha: tableSenha,
+  //     tableEmail: tableEmail,
+  //     tableTipo: tableTipo,
+  //     tableId: tableId,
+  //   };
+  //   console.log(tableData);
+  //   localStorage.setItem("tableUser", JSON.stringify(tableData));
+  // }
+
+  // async function modifyStatus(item) {
+  //   fetch(`http://localhost:3001/usuarios/${item.login}`, {
+  //     method: "DELETE",
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data))
+  //     .catch((error) => console.log(error));
+  //   window.location.reload(false);
+  // }
+ const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+  const [isOpen, setIsOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+  const [sortBy, setSortBy] = useState("");
+  
   function paginate(items, pageNumber, pageSize) {
     const startIndex = (pageNumber - 1) * pageSize;
     return items.slice(startIndex, startIndex + pageSize);
   }
-  // pop-up
-  const [isOpen, setIsOpen] = useState(false);
-
-  // pesquisa e filtro
-  // opção selecionada na cbx
-  const [selectedOption, setSelectedOption] = useState();
-  var filtroSelecionado = selectedOption;
-
-  // set opção selecionada na cbx
-  const handleChangeOption = (event) => {
-    setSelectedOption(event.target.value);
-    setCurrentPage(1);
-  };
-
-  // pega o valor pesquisado no input
-  const [searchValue, setSearchValue] = useState("");
-
-  // filtra a pesquisa de acordo com a opção selecionada na combobox
-  var filteredUsers;
-  switch (filtroSelecionado) {
-    case "email":
-      filteredUsers = users.filter((item) =>
-        item.email.toLowerCase().includes(searchValue.toLowerCase())
-      );
-      break;
-    case "status":
-      filteredUsers = users.filter(
-        (item) =>
-          typeof item.status === "string" &&
-          item.status.toLowerCase().startsWith(searchValue.toLowerCase())
-      );
-      break;
-    case "data":
-      filteredUsers = users.filter(
-        (item) =>
-          typeof item.datacadastro === "string" &&
-          item.datacadastro.toLowerCase().includes(searchValue.toLowerCase())
-      );
-      break;
-    case "tipo":
-      filteredUsers = users.filter(
-        (item) =>
-          typeof item.usuariotipo === "string" &&
-          item.usuariotipo.toLowerCase().startsWith(searchValue.toLowerCase())
-      );
-      break;
-    default:
-      filteredUsers = users.filter(
-        (item) =>
-          typeof item.login === "string" &&
-          item.login.toLowerCase().includes(searchValue.toLowerCase())
-      );
-      break;
-  }
-  // atualiza p/ primeira pag ao pesquisar
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchValue, filtroSelecionado]);
 
   function toggleModal() {
     setIsOpen(!isOpen);
   }
 
-  async function editUsers(item) {
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchValue, sortBy]);
+
+  function editUsers(item) {
     const tableLogin = item.login;
     const tableNome = item.nome;
     const tableSenha = item.senha;
@@ -107,7 +154,7 @@ function Lista({ users }) {
     localStorage.setItem("tableUser", JSON.stringify(tableData));
   }
 
-  async function modifyStatus(item) {
+  function modifyStatus(item) {
     fetch(`http://localhost:3001/usuarios/${item.login}`, {
       method: "DELETE",
     })
@@ -117,6 +164,47 @@ function Lista({ users }) {
     window.location.reload(false);
   }
 
+  const filteredUsers = users.filter((item) => {
+    const searchValueLowerCase = searchValue.toLowerCase();
+    return (
+      item.login.toLowerCase().includes(searchValueLowerCase) ||
+      item.email.toLowerCase().includes(searchValueLowerCase) ||
+      item.status.toLowerCase().startsWith(searchValueLowerCase) ||
+      item.datacadastro.toLowerCase().includes(searchValueLowerCase) ||
+      item.usuariotipo.toLowerCase().startsWith(searchValueLowerCase)
+    );
+  });
+
+  let sortedUsers = [...filteredUsers];
+
+  switch (sortBy) {
+    case "loginAlphabetical":
+      sortedUsers.sort((a, b) => a.login.localeCompare(b.login));
+      break;
+    case "dateRecent":
+      sortedUsers.sort((a, b) => {
+        const dateA = convertDateStringToDate(a.datacadastro);
+        const dateB = convertDateStringToDate(b.datacadastro);
+        return dateB - dateA;
+      });
+      break;
+    case "dateOldest":
+      sortedUsers.sort((a, b) => {
+        const dateA = convertDateStringToDate(a.datacadastro);
+        const dateB = convertDateStringToDate(b.datacadastro);
+        return dateA - dateB;
+      });
+      break;
+    default:
+      break;
+  }
+
+  function convertDateStringToDate(dateString) {
+    const [datePart, timePart] = dateString.split(", ");
+    const [day, month, year] = datePart.split("/");
+    const [hours, minutes, seconds] = timePart.split(":");
+    return new Date(year, month - 1, day, hours, minutes, seconds);
+  }
   async function deleteUser(item) {
     Swal.fire({
       title: 'Are you sure?',
@@ -177,24 +265,24 @@ function Lista({ users }) {
               </ReactModal>
             </div>
             <input
-              className="pesquisa"
-              type="text"
-              placeholder="Pesquisar usuário"
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
-            />
-            <select
-              className="cbx-filtro"
-              id="obg5"
-              value={selectedOption}
-              onChange={handleChangeOption}
-            >
-              <option value="login">Login</option>
-              <option value="email">E-mail</option>
-              <option value="status">Satuts</option>
-              <option value="data">Data</option>
-              <option value="tipo">Tipo</option>
-            </select>
+            className="pesquisa"
+            type="text"
+            placeholder="Pesquisar usuário"
+            value={searchValue}
+            onChange={(e) => setSearchValue(e.target.value)}
+          />
+          <select
+            aria-label="ordenação"
+            className="cbx-filtro"
+            id="obg5"
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+          >
+            <option value="">Ordenar por</option>
+            <option value="loginAlphabetical">Ordem alfabética</option>
+            <option value="dateRecent">Data de cadastro (mais recente)</option>
+            <option value="dateOldest">Data de cadastro (mais antiga)</option>
+          </select>
             <MDBTable align="middle">
               <MDBTableHead>
                 <tr>
@@ -216,7 +304,7 @@ function Lista({ users }) {
                 </tr>
               </MDBTableHead>
               <MDBTableBody>
-                {paginate(filteredUsers, currentPage, itemsPerPage).map(
+                {paginate(sortedUsers, currentPage, itemsPerPage).map(
                   (item, i) => (
                     <tr key={i}>
                       <td>
@@ -253,7 +341,7 @@ function Lista({ users }) {
                           size="sm"
                           onClick={() => modifyStatus(item)}
                         >
-                          {item.status === "ativo" ? "Desativar" : "Ativar"}
+                          {item.status === "ativo" ? "Desativar" : "Ativar  ﾠㅤ"}
                         </MDBBtn>
                         <MDBBtn
                           color="link"
@@ -281,7 +369,7 @@ function Lista({ users }) {
               </MDBPaginationItem>
 
               {Array.from({
-                length: Math.ceil(filteredUsers.length / itemsPerPage),
+                length: Math.ceil(sortedUsers.length / itemsPerPage),
               }).map((item, i) => (
                 <MDBPaginationItem
                   key={i}
