@@ -40,21 +40,13 @@ Uma interface permitindo que os usúarios, sejam, criados, visualizados, editado
  
  :white_check_mark: [SPRINT 3] - 24/04/2023 à 14/05/2023 - <a href="https://github.com/4DeskGroup/API-2023.1/releases/tag/SPRINT3">Acesse o Release aqui</a>
  
- :white_large_square: [SPRINT 4] - 15/05/2023 à 04/06/2023 
+ :white_check_mark: [SPRINT 4] - 15/05/2023 à 04/06/2023 - <a href="https://github.com/4DeskGroup/API-2023.1/releases/tag/SPRINT4">Acesse o Release aqui</a>
  
  #### :white_large_square: Feira de Soluções - 13/06/2023 à 14/06/2023
  
  # :bulb: Backlog
  <div align="left">
-  <img src="https://github.com/4DeskGroup/API-2023.1/blob/main/doc_api2023.1/backlog/backlog_total.png?raw=true" width="500" height="300" alt="NodeJS logo">
-
- </div>
- 
- 
- # 🗂️ Cards das Sprints
- ### Backlog da Sprint 1
-  <div align="left">
-  <img src="https://github.com/4DeskGroup/API-2023.1/blob/main/doc_api2023.1/backlog/backlog1.png?raw=true" width="500" height="300" alt="NodeJS logo">
+  <img src="https://github.com/4DeskGroup/API-2023.1/blob/main/doc/sprint4/backlog/BACKLOG%20TOTAL.png?raw=true" width="500" height="300" alt="NodeJS logo">
 
  </div>
 
