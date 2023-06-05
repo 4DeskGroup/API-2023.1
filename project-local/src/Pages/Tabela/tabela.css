@@ -1,0 +1,188 @@
+* {
+  font-family: 'Poppins';
+}
+
+.container3{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 120vh;
+width: 100%;
+background:  #F5F5F5;
+font-family: 'Poppins';
+font-size: smaller;
+
+}
+
+.fundo3{
+position: absolute;
+align-items: center;
+justify-content: center;
+width: 1000px;
+border-left: 500px;
+top: 180px;
+background: #F9F9F9;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+font-family: 'Poppins';
+}
+
+.content3{
+
+  background: #FFFFFF;
+  border-radius: 15px;
+  width: 900px;
+  height: 250px;
+  justify-content: space-between;
+  align-items: center;
+  top: 50px;
+  position: relative;
+  border:0.05px solid #72787A;
+  margin-left: 50px;
+  font-family: 'Poppins'; 
+
+}
+
+
+.tabela3 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-right: 3%;
+  width: 96%;
+  margin-left: 2%;
+  font-family: 'Poppins';
+}
+
+.tabela3 td {
+  border-bottom: 0.05px solid #72787A;
+  padding: 7px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: 'Poppins';
+}
+
+.tabela3 tr:nth-child(even){
+background-color: #f2f2f2;
+font-family: 'Poppins';
+}
+ 
+.tabela3 th {
+  border-bottom: 0.05px solid #72787A;
+  padding: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: #FF9000;
+  height: 20px;
+  font-family: 'Poppins';
+}  
+
+
+.titulo3{
+      font-weight: bold;
+      text-transform: capitalize;
+      color: #FF9000;
+      position: absolute;
+      left: 120px;
+      top: 120px;
+      font-family: 'Poppins';
+} 
+
+.title-container3 {
+  font-family: 'Poppins';
+  margin-left: 20px;
+}
+
+.title-hr3 {
+  border: 1px solid #FF9000;
+  width: 600px;
+  position: absolute;
+  top: 5px;
+  margin-left: 350px;
+  font-family: 'Poppins';
+}
+.tr4 {
+align-items: center;
+display: flex;
+justify-content: center;
+font-family: 'Poppins';
+}
+.td4Login {
+justify-content: center;
+display: flex;
+align-items: center;
+width: 300px;
+}
+
+.td4Data {
+justify-content: center;
+align-items: center;
+
+width: 300px;
+}
+
+.td4Status {
+justify-content: center;
+align-items: center;
+width: 140px;
+
+}
+  
+.td4Tipo {
+justify-content: center;
+align-items: center;
+width: 100px;
+}
+    
+
+.alinha {
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+h1, .h1 {
+font-size: 30px;
+}
+
+.pagination {
+  position: relative;
+  z-index: 0;
+  /* restante do estilo */
+}
+
+.pesquisa{
+  border-radius: 30px;
+  width: 200px;
+  height: 35px;
+  background: none;
+  border: orange;
+  border-style: solid;
+  border-width: 1.5px;
+  padding-left:30px;
+  padding-right: 30px;
+  color: rgb(122, 122, 119);
+  margin-left: 100px;
+  font-family: 'Poppins';
+  margin-bottom: -70px;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.cbx-filtro{
+    border-radius: 30px;
+    width: 290px;
+    height: 35px;
+    background: none;
+    border: orange;
+    border-style: solid;
+    border-width: 1.5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgb(122, 122, 119);
+    margin-left: 75px;
+    font-family: 'Poppins';
+    background-position: 10px center; 
+}
