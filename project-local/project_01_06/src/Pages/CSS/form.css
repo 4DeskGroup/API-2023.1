@@ -1,0 +1,228 @@
+
+.cabecalho2 {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.container_linha2 {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.cad_titulo2 {
+font-size: 35px;
+position: relative;
+margin-left: -70%;
+margin-top: 20px;
+color: orange;
+
+
+}
+
+
+.form2 {
+margin-top: 53px;
+align-items: center;
+justify-content: center;
+display: flex;
+font-family: 'Poppins';
+background-color: rgb(230, 230, 230);
+}
+
+
+.sub_titulo2 {
+margin-bottom: 430px;
+margin-left: -280px;
+margin-top: 100px;
+position: absolute;
+color: orange;
+
+}
+
+
+.column2 input  {
+border-radius: 30px;
+width: 230px;
+height: 50px;
+background: none;
+border: orange;
+border-style: solid;
+border-width: 1.5px;
+padding-left:30px;
+padding-right: 30px;
+color: rgb(122, 122, 119);
+margin-left: 75px;
+font-family: 'Poppins';
+}
+
+.column2 input:hover{
+background: none;
+border: rgb(169, 169, 169);
+border-style: solid;
+border-width: 1.5px;
+}
+
+.column2 input:focus-visible {
+outline:0;
+border-radius: 10;
+border-color: rgb(136, 136, 240);
+
+}
+
+.column2 label {
+font-size: small;
+color: rgb(253, 160, 0);
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: -10px;
+}
+
+.conteiner_termo2 {
+align-items: center;
+display: flex;
+margin-left: 0px;
+position: absolute;
+top: -40px;
+font-size: smaller;
+}
+
+.conteiner_termo2 #flexCheckDefault{
+    margin-top: 2px;
+    height: 16px;
+    width: 16px;
+}
+.termosAcesso2 {
+margin-top: -20px;
+display: inline;
+margin-bottom: 50px;
+left: 50px;
+
+}
+
+.checkbox2 {
+position: absolute;
+margin-left: 300px;
+margin-top: 25px;
+width: 13px;
+color: #FF6B00;    
+}
+
+.acesso_txt2 {
+position: absolute;
+margin-left: 330px;
+margin-top: 40px;
+font-family: 'Poppins';
+font-size: 12px;
+color: orange;
+}
+
+.botoes2{
+
+position: absolute;
+align-items: center;
+justify-content: center;
+display: flex;
+margin-top: 360px;
+column-gap: 60px;
+}
+
+.botoes2 button {
+border-radius: 25px;
+height: 45px;
+width: 200px;
+background-color: rgb(147, 147, 147);
+border-style: solid;
+border: 1px;
+color: white;
+cursor: pointer;
+font-family: 'Poppins';
+}
+
+.botoes2 button:last-child {
+background-color: orange;
+border-style: solid;
+border: 1px;
+color: white;
+cursor: pointer;
+}
+
+.botoes2-disabled button  {
+background-color: rgb(0, 0, 0);
+border-style: solid;
+border: 1px;
+color: white;
+cursor: pointer;
+}
+
+.botoes2 button:hover {
+background-color: rgb(253, 119, 70);
+}
+
+.botoes2 button:first-child:hover {
+background-color: rgb(206, 206, 206);
+}
+
+.container-form {
+margin-top: 60px;
+margin-bottom: 60px;
+background-color: white;
+height: 470px;
+width: 750px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.column2 {
+display: grid;
+row-gap: 30px;  
+}
+
+
+
+.row2 {
+display: grid;
+grid-template-columns: 1fr 1.2fr;
+margin-left: -30px;
+}
+
+.form-pop-up{
+background-color: rgb(198, 196, 196);
+align-items: center;
+position: absolute;
+justify-content: center;
+display: flex;
+border-radius: 30px;
+margin-left: 23%;
+margin-top: 5%;
+}
+
+.container-pop {
+background-color: white;
+
+height: 470px;
+width: 750px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 30px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#password-warning {
+    display: none;
+    position: absolute;
+    margin-left: 10px;
+    color: red;
+}
+#password-warning1 {
+    display: none;
+    position: absolute;
+    margin-left: 10px;
+    color: red;
+}
