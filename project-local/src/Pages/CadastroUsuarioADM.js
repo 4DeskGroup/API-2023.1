@@ -90,7 +90,7 @@ export function CadastroUsuarioADM() {
         lastname: values.lastname,
         email: values.email,
         password: values.password,
-        usuarioTipo: document.getElementById('obg7').value,
+        tipo: document.getElementById('obg7').value,
         date: date,
       })
       .then((response) => {
