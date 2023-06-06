@@ -273,7 +273,7 @@ app.post("/cadastroADM", async (req, res) => {
   const { password } = req.body;
   const { date } = req.body;
   const status = "ativo";
-  const usuarioTipo = "NORMAL";
+  const {tipo} = req.body;
 
   const existee = await existeUser(login, email);
 
@@ -284,7 +284,7 @@ app.post("/cadastroADM", async (req, res) => {
       password,
       email,
       status,
-      usuarioTipo,
+      tipo,
       date, res
     );
     res.send({ msg: "Usuário cadastrado com sucesso." });
