@@ -9,7 +9,7 @@ const shortid = require("shortid");
 const cliente = new Pool({
   host: "localhost",
   user: "postgres",
-  password: "1234",
+  password: "123",
   database: "visiona",
   // connectionString: 'postgres://jgkjdnpq:LSQ78hphQqJtTT5At_aS9Z-T3Dps25iG@silly.db.elephantsql.com/jgkjdnpq',
   // ssl: {

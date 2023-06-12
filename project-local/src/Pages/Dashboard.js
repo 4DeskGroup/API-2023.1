@@ -59,20 +59,19 @@ function Dashboard() {
   return (
     <>
       <Navbar/>
-      <div className='mx-5'>
-        <div className='row text-center mt-5 text-primary'>
+      
+        <div className='row text-center mt-3 text-primary'>
           <h3 style={{ color: '#FF6B00'}}>Dashboard</h3>
         </div>   
 
-        <div className='row text-center mt-5'>
+        <div className='row text-center mt-3'>
           <h6>Gráfico referente ao número de usuários Ativos e Inativos</h6>
         </div>
 
-        <div className='row text-center mt-5' style={{ color: '#FF6B00', width: '50%' }}>
-            <canvas ref={chartRef} style={{ width: '40%', height: '40%', margin: '0%' }}></canvas>
+        <div className='row text-center mt-3' style={{ color: '#FF6B00' }}>
+            <canvas ref={chartRef} style={{ width: '30%', margin: '0%' }}></canvas>
         </div>
 
-      </div>
       <BottomNavbar/>
     </>
   );
